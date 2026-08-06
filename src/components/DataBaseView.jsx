@@ -44,9 +44,9 @@ Posso fornecer o diagnóstico de forma gratuita.`;
   const [customMsgTemplate, setCustomMsgTemplate] = useState(DEFAULT_TEMPLATE);
   const [showMsgModal, setShowMsgModal] = useState(false);
 
-  // Paginação (500 por página)
+  // Paginação Flutuante (10, 25, 50, 100 por página)
   const [currentPage, setCurrentPage] = useState(1);
-  const ITEMS_PER_PAGE = 500;
+  const [itemsPerPage, setItemsPerPage] = useState(10);
 
   // Estados de Dados da API Serverless
   const [dbData, setDbData] = useState([]);
@@ -69,7 +69,7 @@ Posso fornecer o diagnóstico de forma gratuita.`;
     if (bairro) params.append('bairro', bairro);
     if (minCapital) params.append('minCapital', minCapital);
     params.append('page', currentPage.toString());
-    params.append('limit', ITEMS_PER_PAGE.toString());
+    params.append('limit', itemsPerPage.toString());
 
     fetch(`/.netlify/functions/get-empresas?${params.toString()}`)
       .then(res => res.json())
@@ -93,7 +93,7 @@ Posso fornecer o diagnóstico de forma gratuita.`;
       });
 
     return () => { isMounted = false; };
-  }, [cidade, cnae, comWebsite, comWhatsapp, porte, bairro, minCapital, currentPage]);
+  }, [cidade, cnae, comWebsite, comWhatsapp, porte, bairro, minCapital, currentPage, itemsPerPage]);
 
   const fetchStaticDataset = (isMounted) => {
     fetch('/empresas_sp.json')
@@ -109,8 +109,8 @@ Posso fornecer o diagnóstico de forma gratuita.`;
           if (bairro) filtered = filtered.filter(x => x.bairro && x.bairro.toLowerCase().includes(bairro.toLowerCase()));
           
           setDbTotal(filtered.length);
-          const start = (currentPage - 1) * ITEMS_PER_PAGE;
-          setDbData(filtered.slice(start, start + ITEMS_PER_PAGE));
+          const start = (currentPage - 1) * itemsPerPage;
+          setDbData(filtered.slice(start, start + itemsPerPage));
         } else {
           setDbData(getFallbackData());
           setDbTotal(getFallbackData().length);
@@ -340,7 +340,25 @@ Posso fornecer o diagnóstico de forma gratuita.`;
           </span>
         </div>
 
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap items-center gap-3">
+          {/* Seletor de Tamanho de Página */}
+          <div className="flex items-center gap-1.5 text-xs text-slate-400">
+            <span>Mostrar por página:</span>
+            <select
+              value={itemsPerPage}
+              onChange={(e) => {
+                setItemsPerPage(Number(e.target.value));
+                setCurrentPage(1);
+              }}
+              className="px-2.5 py-1.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 font-bold text-xs focus:outline-none focus:border-blue-500 cursor-pointer"
+            >
+              <option value={10}>10 por página (Mais rápido)</option>
+              <option value={25}>25 por página</option>
+              <option value={50}>50 por página</option>
+              <option value={100}>100 por página</option>
+            </select>
+          </div>
+
           <button
             onClick={() => setShowSaveListModal(true)}
             disabled={dbData.length === 0}
@@ -358,7 +376,7 @@ Posso fornecer o diagnóstico de forma gratuita.`;
           <div className="absolute inset-0 bg-slate-950/60 backdrop-blur-xs flex items-center justify-center z-20">
             <div className="flex items-center gap-3 bg-slate-900 p-4 rounded-2xl border border-slate-700 text-slate-200 text-xs shadow-xl">
               <Loader2 className="w-5 h-5 animate-spin text-blue-400" />
-              <span>Consultando CockroachDB em nuvem...</span>
+              <span>Carregando empresas...</span>
             </div>
           </div>
         )}
@@ -463,7 +481,7 @@ Posso fornecer o diagnóstico de forma gratuita.`;
         </div>
 
         {/* Paginador */}
-        <div className="p-4 bg-slate-900/90 border-t border-slate-800 flex items-center justify-between">
+        <div className="p-4 bg-slate-900/90 border-t border-slate-800 flex items-center justify-between flex-wrap gap-3">
           <button
             onClick={() => setCurrentPage(p => Math.max(p - 1, 1))}
             disabled={currentPage === 1 || loading}
@@ -472,9 +490,28 @@ Posso fornecer o diagnóstico de forma gratuita.`;
             <ChevronLeft className="w-4 h-4" /> Anterior
           </button>
 
-          <span className="text-xs text-slate-400">
-            Página <strong>{currentPage}</strong> de <strong>{totalPages || 1}</strong>
-          </span>
+          <div className="flex items-center gap-3">
+            <span className="text-xs text-slate-400">
+              Página <strong>{currentPage}</strong> de <strong>{totalPages || 1}</strong>
+            </span>
+
+            <div className="flex items-center gap-1.5 text-xs text-slate-400">
+              <span>Exibir:</span>
+              <select
+                value={itemsPerPage}
+                onChange={(e) => {
+                  setItemsPerPage(Number(e.target.value));
+                  setCurrentPage(1);
+                }}
+                className="px-2 py-1 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 font-semibold text-xs focus:outline-none focus:border-blue-500"
+              >
+                <option value={10}>10</option>
+                <option value={25}>25</option>
+                <option value={50}>50</option>
+                <option value={100}>100</option>
+              </select>
+            </div>
+          </div>
 
           <button
             onClick={() => setCurrentPage(p => Math.min(p + 1, totalPages))}
