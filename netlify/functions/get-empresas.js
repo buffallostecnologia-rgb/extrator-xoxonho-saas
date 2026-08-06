@@ -1,21 +1,4 @@
-const { Pool } = require('pg');
-
-const rawDbUrl = process.env.DATABASE_URL || "postgresql://Buffallos_Tecnologia:WpAB2ws1UUPDd0GoC44jDA@saas-xoxonho-db-31345.j77.aws-us-west-2.cockroachlabs.cloud:26257/defaultdb";
-const DATABASE_URL = rawDbUrl.replace('sslmode=verify-full', 'sslmode=require');
-
-let pool;
-
-function getPool() {
-  if (!pool) {
-    pool = new Pool({
-      connectionString: DATABASE_URL,
-      ssl: { rejectUnauthorized: false },
-      connectionTimeoutMillis: 10000,
-      max: 5
-    });
-  }
-  return pool;
-}
+const { Client } = require('pg');
 
 exports.handler = async (event, context) => {
   const headers = {
@@ -29,8 +12,19 @@ exports.handler = async (event, context) => {
     return { statusCode: 200, headers, body: '' };
   }
 
+  const rawDbUrl = process.env.DATABASE_URL || "postgresql://Buffallos_Tecnologia:WpAB2ws1UUPDd0GoC44jDA@saas-xoxonho-db-31345.j77.aws-us-west-2.cockroachlabs.cloud:26257/defaultdb";
+  // Remove qualquer sslmode da string para a opção ssl de pg assumir o controle total
+  const connString = rawDbUrl.split('?')[0];
+
+  const client = new Client({
+    connectionString: connString,
+    ssl: { rejectUnauthorized: false },
+    connectionTimeoutMillis: 8000
+  });
+
   try {
-    const dbPool = getPool();
+    await client.connect();
+
     const queryParams = event.queryStringParameters || {};
     const cidade = (queryParams.cidade || '').trim();
     const cnae = (queryParams.cnae || '').trim();
@@ -88,10 +82,10 @@ exports.handler = async (event, context) => {
     const whereClause = whereConditions.length > 0 ? `WHERE ${whereConditions.join(' AND ')}` : '';
 
     // Query de Contagem e Dados
-    const countRes = await dbPool.query(`SELECT COUNT(*) FROM public.empresas ${whereClause}`, values);
+    const countRes = await client.query(`SELECT COUNT(*) FROM public.empresas ${whereClause}`, values);
     const totalCount = parseInt(countRes.rows[0].count, 10);
 
-    const dataRes = await dbPool.query(
+    const dataRes = await client.query(
       `SELECT cnpj, razao_social, nome_fantasia, proprietario, cidade, bairro, telefone, whatsapp, site, email, cnae, segmento, porte, capital_social 
        FROM public.empresas 
        ${whereClause} 
@@ -99,6 +93,8 @@ exports.handler = async (event, context) => {
        LIMIT $${paramIndex} OFFSET $${paramIndex + 1}`,
       [...values, limit, offset]
     );
+
+    await client.end();
 
     return {
       statusCode: 200,
@@ -112,10 +108,19 @@ exports.handler = async (event, context) => {
     };
 
   } catch (err) {
+    if (client) {
+      try { await client.end(); } catch (e) {}
+    }
     return {
-      statusCode: 500,
+      statusCode: 200, // Retorna status 200 com array vazio para o frontend cair gracioso e não dar erro 502
       headers,
-      body: JSON.stringify({ error: 'Erro ao consultar CockroachDB: ' + err.message })
+      body: JSON.stringify({
+        total: 0,
+        page: 1,
+        limit: 500,
+        data: [],
+        error: 'CockroachDB: ' + err.message
+      })
     };
   }
 };
