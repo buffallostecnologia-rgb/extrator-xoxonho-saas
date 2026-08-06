@@ -17,7 +17,7 @@ import {
   Check
 } from 'lucide-react';
 
-export default function LandingPage({ onGoToLogin }) {
+export default function LandingPage({ onGoToLogin, onSelectPlan, onOpenCheckout }) {
   return (
     <div className="min-h-screen bg-[#0b0f19] text-slate-100 font-sans selection:bg-blue-500 selection:text-white">
       
