@@ -102,11 +102,11 @@ Posso fornecer o diagnóstico de forma gratuita.`;
         if (!isMounted) return;
         if (Array.isArray(items) && items.length > 0) {
           let filtered = items;
-          if (cidade) filtered = filtered.filter(x => x.cidade.toLowerCase().includes(cidade.toLowerCase()));
-          if (cnae) filtered = filtered.filter(x => (x.segmento && x.segmento.toLowerCase().includes(cnae.toLowerCase())) || (x.cnae && x.cnae.includes(cnae)));
-          if (comWebsite) filtered = filtered.filter(x => x.site && x.site.trim() !== '');
-          if (comWhatsapp) filtered = filtered.filter(x => x.whatsapp && x.whatsapp.trim() !== '');
-          if (bairro) filtered = filtered.filter(x => x.bairro && x.bairro.toLowerCase().includes(bairro.toLowerCase()));
+          if (cidade) filtered = filtered.filter(x => x && x.cidade && x.cidade.toString().toLowerCase().includes(cidade.toLowerCase()));
+          if (cnae) filtered = filtered.filter(x => x && ((x.segmento && x.segmento.toString().toLowerCase().includes(cnae.toLowerCase())) || (x.cnae && x.cnae.toString().includes(cnae))));
+          if (comWebsite) filtered = filtered.filter(x => x && x.site && x.site.toString().trim() !== '');
+          if (comWhatsapp) filtered = filtered.filter(x => x && x.whatsapp && x.whatsapp.toString().trim() !== '');
+          if (bairro) filtered = filtered.filter(x => x && x.bairro && x.bairro.toString().toLowerCase().includes(bairro.toLowerCase()));
           
           setDbTotal(filtered.length);
           const start = (currentPage - 1) * itemsPerPage;
