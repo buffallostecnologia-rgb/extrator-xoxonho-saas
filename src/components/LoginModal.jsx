@@ -116,13 +116,8 @@ export default function LoginModal({ onLogin, onClose }) {
           </button>
         </form>
 
-        <div className="w-full pb-6 px-8 text-center pt-3">
-          <button
-            onClick={() => onLogin({ name: 'Consultor VIP', email: 'vip@xoxonho.com.br', role: 'Acesso Direto' })}
-            className="text-xs text-slate-400 hover:text-blue-400 underline transition-colors"
-          >
-            ⚡ Acessar em Modo de Demonstração Rápida
-          </button>
+        <div className="w-full pb-6 px-8 text-center pt-3 text-[11px] text-slate-500">
+          Acesso protegido por autenticação de segurança Buffallos
         </div>
 
       </div>
