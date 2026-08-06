@@ -222,7 +222,6 @@ Posso fornecer o diagnóstico de forma gratuita.`;
         <div className="flex items-center gap-2 text-xs font-extrabold text-slate-200 uppercase tracking-wider border-b border-slate-800 pb-3">
           <SlidersHorizontal className="w-4 h-4 text-blue-400" />
           <span>Filtro Comercial de Prospecção</span>
-          <span className="ml-auto text-[10px] font-normal text-slate-400 lowercase">Exibindo 500 por página</span>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
