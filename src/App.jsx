@@ -6,10 +6,12 @@ import DashboardView from './components/DashboardView';
 import DataBaseView from './components/DataBaseView';
 import MinhasListasView from './components/MinhasListasView';
 import InteligenciaView from './components/InteligenciaView';
+import CheckoutModal from './components/CheckoutModal';
 
 export default function App() {
   // Controle de View Principal ('landing', 'login', 'app')
   const [viewMode, setViewMode] = useState('landing');
+  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
 
   // Estado de Autenticação (localStorage)
   const [user, setUser] = useState(() => {
@@ -65,16 +67,34 @@ export default function App() {
   // Se o usuário clicar em "Acessar Plataforma" na Landing Page
   if (viewMode === 'landing') {
     return (
-      <LandingPage
-        onGoToLogin={() => setViewMode(user ? 'app' : 'login')}
-        onSelectPlan={() => setViewMode(user ? 'app' : 'login')}
-      />
+      <>
+        <LandingPage
+          onGoToLogin={() => setViewMode(user ? 'app' : 'login')}
+          onSelectPlan={() => setIsCheckoutOpen(true)}
+          onOpenCheckout={() => setIsCheckoutOpen(true)}
+        />
+        <CheckoutModal 
+          isOpen={isCheckoutOpen} 
+          onClose={() => setIsCheckoutOpen(false)} 
+        />
+      </>
     );
   }
 
   // Se for pra tela de login
   if (viewMode === 'login' && !user) {
-    return <LoginModal onLogin={handleLogin} />;
+    return (
+      <>
+        <LoginModal 
+          onLogin={handleLogin} 
+          onClose={() => setViewMode('landing')} 
+        />
+        <CheckoutModal 
+          isOpen={isCheckoutOpen} 
+          onClose={() => setIsCheckoutOpen(false)} 
+        />
+      </>
+    );
   }
 
   return (
@@ -112,6 +132,11 @@ export default function App() {
           <InteligenciaView />
         )}
       </main>
+
+      <CheckoutModal 
+        isOpen={isCheckoutOpen} 
+        onClose={() => setIsCheckoutOpen(false)} 
+      />
     </div>
   );
 }

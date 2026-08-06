@@ -259,7 +259,7 @@ export default function LandingPage({ onGoToLogin }) {
                 <p className="text-[11px] text-slate-400">Pagamento via PIX, Cartão de Crédito ou Boleto pelo Asaas.</p>
 
                 <button
-                  onClick={onGoToLogin}
+                  onClick={onOpenCheckout || onGoToLogin}
                   className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold text-sm shadow-xl shadow-blue-600/30 transition-all hover:scale-105"
                 >
                   Assinar por R$ 59/mês
