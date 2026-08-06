@@ -1,7 +1,11 @@
 import React from 'react';
+import { UserButton, useUser, useClerk } from '@clerk/clerk-react';
 import { LayoutDashboard, Database, FolderHeart, BrainCircuit, LogOut, UserCheck, Sparkles, Home } from 'lucide-react';
 
 export default function Sidebar({ activeTab, setActiveTab, user, onLogout, onGoToLanding }) {
+  const { user: clerkUser, isSignedIn } = useUser();
+  const { signOut } = useClerk();
+
   const menuItems = [
     {
       id: 'dashboard',
@@ -28,6 +32,13 @@ export default function Sidebar({ activeTab, setActiveTab, user, onLogout, onGoT
       desc: 'Panorama & Dados SP'
     }
   ];
+
+  const handleUserLogout = () => {
+    if (isSignedIn) {
+      signOut();
+    }
+    onLogout();
+  };
 
   return (
     <aside className="w-64 bg-slate-900/95 border-r border-slate-800 flex flex-col justify-between shrink-0 h-screen sticky top-0 backdrop-blur-xl z-30">
@@ -81,20 +92,35 @@ export default function Sidebar({ activeTab, setActiveTab, user, onLogout, onGoT
           <span>Ver Página de Vendas</span>
         </button>
 
-        {user && (
-          <div className="p-3 rounded-xl bg-slate-800/50 border border-slate-700/50 flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-xs">
-              <UserCheck className="w-4 h-4" />
+        {/* Componente Nativo de Perfil do Clerk */}
+        <div className="p-3 rounded-xl bg-slate-800/50 border border-slate-700/50 flex items-center gap-3">
+          {isSignedIn ? (
+            <div className="flex items-center gap-3 w-full">
+              <UserButton afterSignOutUrl="/" />
+              <div className="flex-1 min-w-0">
+                <p className="text-xs font-semibold text-slate-200 truncate">
+                  {clerkUser.fullName || clerkUser.primaryEmailAddress?.emailAddress}
+                </p>
+                <p className="text-[10px] text-emerald-400 font-medium">Assinante Pro R$59</p>
+              </div>
             </div>
-            <div className="flex-1 min-w-0">
-              <p className="text-xs font-semibold text-slate-200 truncate">{user.name}</p>
-              <p className="text-[10px] text-slate-400 truncate">{user.role}</p>
-            </div>
-          </div>
-        )}
+          ) : (
+            user && (
+              <>
+                <div className="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-xs">
+                  <UserCheck className="w-4 h-4" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs font-semibold text-slate-200 truncate">{user.name}</p>
+                  <p className="text-[10px] text-slate-400 truncate">{user.role}</p>
+                </div>
+              </>
+            )
+          )}
+        </div>
 
         <button
-          onClick={onLogout}
+          onClick={handleUserLogout}
           className="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-lg text-xs font-medium text-rose-400 hover:bg-rose-500/10 border border-transparent hover:border-rose-500/20 transition-all"
         >
           <LogOut className="w-3.5 h-3.5" />

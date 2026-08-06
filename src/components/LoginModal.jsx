@@ -1,92 +1,116 @@
 import React, { useState } from 'react';
-import { Lock, User, Key, CheckCircle, ShieldCheck, ArrowRight } from 'lucide-react';
+import { SignIn, SignUp, useUser } from '@clerk/clerk-react';
+import { ShieldCheck, X, UserCheck, Sparkles } from 'lucide-react';
 
-export default function LoginModal({ onLogin }) {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+export default function LoginModal({ onLogin, onClose }) {
+  const [authMode, setAuthMode] = useState('signIn'); // 'signIn' | 'signUp'
+  const { isSignedIn, user } = useUser();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!username.trim()) {
-      setError('Por favor, informe seu usuário ou e-mail comercial.');
-      return;
+  // Se o Clerk já autenticou o usuário, notifica a aplicação pai
+  React.useEffect(() => {
+    if (isSignedIn && user) {
+      onLogin({
+        name: user.fullName || user.primaryEmailAddress?.emailAddress.split('@')[0] || 'Cliente Pro',
+        email: user.primaryEmailAddress?.emailAddress || 'cliente@saas.com',
+        role: 'Assinante Pro R$59',
+        clerkId: user.id
+      });
     }
-    // Auth aceita qualquer usuário comercial (ou senha comercial default)
-    onLogin({
-      name: username.split('@')[0].replace('.', ' ').toUpperCase(),
-      email: username.includes('@') ? username : `${username}@comercial.com`,
-      role: 'Consultor de Vendas'
-    });
-  };
+  }, [isSignedIn, user, onLogin]);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
-      <div className="w-full max-w-md p-8 glass-card rounded-2xl border border-slate-700/50 shadow-2xl relative overflow-hidden">
-        {/* Glow Effects */}
-        <div className="absolute -top-20 -right-20 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-500/30">
-            <ShieldCheck className="w-8 h-8" />
-          </div>
-          <h2 className="text-2xl font-bold text-slate-100 tracking-tight">Portal Comercial CNPJ SP</h2>
-          <p className="text-sm text-slate-400 mt-1">Acesso exclusivo para a equipe de prospecção</p>
-        </div>
-
-        {error && (
-          <div className="mb-4 p-3 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs text-center">
-            {error}
-          </div>
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md overflow-y-auto">
+      <div className="w-full max-w-md my-8 glass-card rounded-3xl border border-slate-700/60 shadow-2xl relative overflow-hidden flex flex-col items-center">
+        
+        {/* Botão de Fechar se fornecido */}
+        {onClose && (
+          <button 
+            onClick={onClose}
+            className="absolute top-4 right-4 p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all"
+          >
+            <X className="w-5 h-5" />
+          </button>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-5">
-          <div>
-            <label className="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Usuário / E-mail</label>
-            <div className="relative">
-              <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                <User className="w-4 h-4" />
-              </div>
-              <input
-                type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                placeholder="vendedor@empresa.com.br"
-                className="w-full pl-10 pr-4 py-3 bg-slate-900/90 border border-slate-700/70 rounded-xl text-slate-100 placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
-                required
-              />
-            </div>
+        {/* Header com Mascot Branding */}
+        <div className="text-center pt-8 px-6 pb-2">
+          <div className="inline-flex items-center justify-center w-16 h-16 mb-3 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 text-white shadow-lg shadow-blue-500/30 p-0.5">
+            <img src="/logo_gordinho.png" alt="Xoxonho Logo" className="w-full h-full object-contain rounded-2xl bg-slate-900" />
           </div>
-
-          <div>
-            <label className="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Senha de Acesso</label>
-            <div className="relative">
-              <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                <Key className="w-4 h-4" />
-              </div>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••"
-                className="w-full pl-10 pr-4 py-3 bg-slate-900/90 border border-slate-700/70 rounded-xl text-slate-100 placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
-              />
-            </div>
-          </div>
-
-          <button
-            type="submit"
-            className="w-full py-3.5 px-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold rounded-xl shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2 transition-all transform active:scale-98"
-          >
-            <span>Entrar no Dashboard</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
-        </form>
-
-        <div className="mt-6 text-center text-xs text-slate-500">
-          Integração com Google Sheets & Cloudflare Pages
+          <h2 className="text-2xl font-bold text-slate-100 tracking-tight flex items-center justify-center gap-2">
+            <span>Autenticação Clerk</span>
+            <Sparkles className="w-5 h-5 text-amber-400" />
+          </h2>
+          <p className="text-xs text-slate-400 mt-1">Acesso seguro ao Extrator Xoxonho SP</p>
         </div>
+
+        {/* Tab Toggle: Entrar vs Criar Conta */}
+        <div className="flex bg-slate-900/90 p-1.5 rounded-2xl border border-slate-800 mb-4 my-2">
+          <button
+            onClick={() => setAuthMode('signIn')}
+            className={`px-5 py-2 rounded-xl text-xs font-semibold transition-all ${
+              authMode === 'signIn'
+                ? 'bg-blue-600 text-white shadow-md'
+                : 'text-slate-400 hover:text-slate-200'
+            }`}
+          >
+            Fazer Login
+          </button>
+          <button
+            onClick={() => setAuthMode('signUp')}
+            className={`px-5 py-2 rounded-xl text-xs font-semibold transition-all ${
+              authMode === 'signUp'
+                ? 'bg-blue-600 text-white shadow-md'
+                : 'text-slate-400 hover:text-slate-200'
+            }`}
+          >
+            Criar Conta
+          </button>
+        </div>
+
+        {/* Componentes Oficiais do Clerk */}
+        <div className="w-full p-6 flex justify-center">
+          {authMode === 'signIn' ? (
+            <SignIn 
+              appearance={{
+                elements: {
+                  card: 'bg-transparent shadow-none p-0',
+                  headerTitle: 'hidden',
+                  headerSubtitle: 'hidden',
+                  socialButtonsBlockButton: 'bg-slate-900 border-slate-700 text-slate-200 hover:bg-slate-800',
+                  formButtonPrimary: 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold',
+                  footerActionLink: 'text-blue-400 hover:text-blue-300'
+                }
+              }}
+              routing="hash"
+            />
+          ) : (
+            <SignUp 
+              appearance={{
+                elements: {
+                  card: 'bg-transparent shadow-none p-0',
+                  headerTitle: 'hidden',
+                  headerSubtitle: 'hidden',
+                  socialButtonsBlockButton: 'bg-slate-900 border-slate-700 text-slate-200 hover:bg-slate-800',
+                  formButtonPrimary: 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold',
+                  footerActionLink: 'text-blue-400 hover:text-blue-300'
+                }
+              }}
+              routing="hash"
+            />
+          )}
+        </div>
+
+        {/* Modo Demo de Fallback */}
+        <div className="w-full pb-6 px-8 text-center border-t border-slate-800/60 pt-4 mt-2">
+          <button
+            onClick={() => onLogin({ name: 'Consultor Demo', email: 'demo@xoxonho.com.br', role: 'Acesso Rápido' })}
+            className="text-xs text-slate-400 hover:text-blue-400 underline transition-colors"
+          >
+            ⚡ Acessar em Modo de Demonstração Rápida
+          </button>
+        </div>
+
       </div>
     </div>
   );
