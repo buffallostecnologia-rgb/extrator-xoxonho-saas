@@ -79,15 +79,13 @@ Posso fornecer o diagnóstico de forma gratuita.`;
           setDbData(resData.data);
           setDbTotal(resData.total || resData.data.length);
         } else {
-          // Se não houver resposta do servidor, usa dataset local
-          setDbData(getFallbackData());
-          setDbTotal(getFallbackData().length);
+          // Busca dataset estático do CDN se o servidor retornar vazio
+          fetchStaticDataset(isMounted);
         }
       })
       .catch(err => {
         if (isMounted) {
-          setDbData(getFallbackData());
-          setDbTotal(getFallbackData().length);
+          fetchStaticDataset(isMounted);
         }
       })
       .finally(() => {
@@ -96,6 +94,35 @@ Posso fornecer o diagnóstico de forma gratuita.`;
 
     return () => { isMounted = false; };
   }, [cidade, cnae, comWebsite, comWhatsapp, porte, bairro, minCapital, currentPage]);
+
+  const fetchStaticDataset = (isMounted) => {
+    fetch('/empresas_sp.json')
+      .then(r => r.json())
+      .then(items => {
+        if (!isMounted) return;
+        if (Array.isArray(items) && items.length > 0) {
+          let filtered = items;
+          if (cidade) filtered = filtered.filter(x => x.cidade.toLowerCase().includes(cidade.toLowerCase()));
+          if (cnae) filtered = filtered.filter(x => (x.segmento && x.segmento.toLowerCase().includes(cnae.toLowerCase())) || (x.cnae && x.cnae.includes(cnae)));
+          if (comWebsite) filtered = filtered.filter(x => x.site && x.site.trim() !== '');
+          if (comWhatsapp) filtered = filtered.filter(x => x.whatsapp && x.whatsapp.trim() !== '');
+          if (bairro) filtered = filtered.filter(x => x.bairro && x.bairro.toLowerCase().includes(bairro.toLowerCase()));
+          
+          setDbTotal(filtered.length);
+          const start = (currentPage - 1) * ITEMS_PER_PAGE;
+          setDbData(filtered.slice(start, start + ITEMS_PER_PAGE));
+        } else {
+          setDbData(getFallbackData());
+          setDbTotal(getFallbackData().length);
+        }
+      })
+      .catch(() => {
+        if (isMounted) {
+          setDbData(getFallbackData());
+          setDbTotal(getFallbackData().length);
+        }
+      });
+  };
 
   const getFallbackData = () => [
     { cnpj: '51.892.930/0001-45', razao_social: 'RIO CLARO TECNOLOGIA LTDA', nome_fantasia: 'RC TECH', proprietario: 'Marcos Vinicius Soares', cidade: 'Rio Claro', bairro: 'Centro', telefone: '(19) 3524-9000', whatsapp: '(19) 99904-2745', site: 'www.rctech.com.br', email: 'contato@rctech.com.br', cnae: '6201501', segmento: 'Desenvolvimento de software sob encomenda', porte: 'MEI / ME', capital_social: 50000 },
