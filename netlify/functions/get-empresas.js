@@ -1,6 +1,21 @@
-const { Client } = require('pg');
+const { Pool } = require('pg');
 
-const DATABASE_URL = process.env.DATABASE_URL || "postgresql://Buffallos_Tecnologia:WpAB2ws1UUPDd0GoC44jDA@saas-xoxonho-db-31345.j77.aws-us-west-2.cockroachlabs.cloud:26257/defaultdb?sslmode=require";
+const DATABASE_URL = process.env.DATABASE_URL || "postgresql://Buffallos_Tecnologia:WpAB2ws1UUPDd0GoC44jDA@saas-xoxonho-db-31345.j77.aws-us-west-2.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full";
+
+// Pool singleton para reutilizar conexões em ambiente Serverless
+let pool;
+
+function getPool() {
+  if (!pool) {
+    pool = new Pool({
+      connectionString: DATABASE_URL,
+      ssl: { rejectUnauthorized: false },
+      connectionTimeoutMillis: 5000,
+      max: 5
+    });
+  }
+  return pool;
+}
 
 exports.handler = async (event, context) => {
   const headers = {
@@ -14,14 +29,8 @@ exports.handler = async (event, context) => {
     return { statusCode: 200, headers, body: '' };
   }
 
-  const client = new Client({
-    connectionString: DATABASE_URL,
-    ssl: { rejectUnauthorized: false }
-  });
-
   try {
-    await client.connect();
-
+    const dbPool = getPool();
     const queryParams = event.queryStringParameters || {};
     const cidade = (queryParams.cidade || '').trim();
     const cnae = (queryParams.cnae || '').trim();
@@ -78,12 +87,11 @@ exports.handler = async (event, context) => {
 
     const whereClause = whereConditions.length > 0 ? `WHERE ${whereConditions.join(' AND ')}` : '';
 
-    // Contagem Total
-    const countRes = await client.query(`SELECT COUNT(*) FROM public.empresas ${whereClause}`, values);
+    // Query de Contagem e Dados
+    const countRes = await dbPool.query(`SELECT COUNT(*) FROM public.empresas ${whereClause}`, values);
     const totalCount = parseInt(countRes.rows[0].count, 10);
 
-    // Busca Paginada
-    const dataRes = await client.query(
+    const dataRes = await dbPool.query(
       `SELECT cnpj, razao_social, nome_fantasia, proprietario, cidade, bairro, telefone, whatsapp, site, email, cnae, segmento, porte, capital_social 
        FROM public.empresas 
        ${whereClause} 
@@ -91,8 +99,6 @@ exports.handler = async (event, context) => {
        LIMIT $${paramIndex} OFFSET $${paramIndex + 1}`,
       [...values, limit, offset]
     );
-
-    await client.end();
 
     return {
       statusCode: 200,
@@ -106,7 +112,6 @@ exports.handler = async (event, context) => {
     };
 
   } catch (err) {
-    if (client) await client.end().catch(() => {});
     return {
       statusCode: 500,
       headers,
