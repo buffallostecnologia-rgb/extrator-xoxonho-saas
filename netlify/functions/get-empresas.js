@@ -1,8 +1,8 @@
 const { Pool } = require('pg');
 
-const DATABASE_URL = process.env.DATABASE_URL || "postgresql://Buffallos_Tecnologia:WpAB2ws1UUPDd0GoC44jDA@saas-xoxonho-db-31345.j77.aws-us-west-2.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full";
+const rawDbUrl = process.env.DATABASE_URL || "postgresql://Buffallos_Tecnologia:WpAB2ws1UUPDd0GoC44jDA@saas-xoxonho-db-31345.j77.aws-us-west-2.cockroachlabs.cloud:26257/defaultdb";
+const DATABASE_URL = rawDbUrl.replace('sslmode=verify-full', 'sslmode=require');
 
-// Pool singleton para reutilizar conexões em ambiente Serverless
 let pool;
 
 function getPool() {
@@ -10,7 +10,7 @@ function getPool() {
     pool = new Pool({
       connectionString: DATABASE_URL,
       ssl: { rejectUnauthorized: false },
-      connectionTimeoutMillis: 5000,
+      connectionTimeoutMillis: 10000,
       max: 5
     });
   }
