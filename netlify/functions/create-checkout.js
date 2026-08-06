@@ -1,9 +1,5 @@
 const fetch = require('node-fetch');
 
-// Asaas API Key vem das Variáveis de Ambiente do Netlify (process.env.ASAAS_API_KEY)
-const ASAAS_API_KEY = process.env.ASAAS_API_KEY;
-const ASAAS_API_URL = process.env.ASAAS_API_URL || "https://www.asaas.com/api/v3";
-
 exports.handler = async (event, context) => {
   const headers = {
     'Access-Control-Allow-Origin': '*',
@@ -15,6 +11,9 @@ exports.handler = async (event, context) => {
   if (event.httpMethod === 'OPTIONS') {
     return { statusCode: 200, headers, body: '' };
   }
+
+  const apiKey = (process.env.ASAAS_API_KEY || '').trim();
+  const apiUrl = (process.env.ASAAS_API_URL || 'https://www.asaas.com/api/v3').trim();
 
   try {
     const data = JSON.parse(event.body || '{}');
@@ -28,20 +27,20 @@ exports.handler = async (event, context) => {
       };
     }
 
-    if (!ASAAS_API_KEY) {
+    if (!apiKey) {
       return {
         statusCode: 500,
         headers,
-        body: JSON.stringify({ error: 'Configuração ASAAS_API_KEY não encontrada no servidor.' })
+        body: JSON.stringify({ error: 'Chave ASAAS_API_KEY não configurada no servidor.' })
       };
     }
 
     // 1. Criar ou Buscar Cliente no Asaas
-    const customerRes = await fetch(`${ASAAS_API_URL}/customers`, {
+    const customerRes = await fetch(`${apiUrl}/customers`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'access_token': ASAAS_API_KEY
+        'access_token': apiKey
       },
       body: JSON.stringify({
         name,
@@ -54,26 +53,26 @@ exports.handler = async (event, context) => {
 
     const customerData = await customerRes.json();
 
-    if (customerData.errors) {
+    if (customerData.errors && customerData.errors.length > 0) {
       return {
         statusCode: 400,
         headers,
-        body: JSON.stringify({ error: customerData.errors[0].description })
+        body: JSON.stringify({ error: 'Asaas: ' + customerData.errors[0].description })
       };
     }
 
     const customerId = customerData.id;
 
     // 2. Criar Assinatura Mensal de R$ 59,00 no Asaas
-    const subRes = await fetch(`${ASAAS_API_URL}/subscriptions`, {
+    const subRes = await fetch(`${apiUrl}/subscriptions`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'access_token': ASAAS_API_KEY
+        'access_token': apiKey
       },
       body: JSON.stringify({
         customer: customerId,
-        billingType: 'UNDEFINED', // Permite PIX, Cartão de Crédito ou Boleto
+        billingType: 'UNDEFINED',
         value: 59.00,
         nextDueDate: new Date(Date.now() + 86400000).toISOString().split('T')[0],
         cycle: 'MONTHLY',
@@ -83,11 +82,11 @@ exports.handler = async (event, context) => {
 
     const subData = await subRes.json();
 
-    if (subData.errors) {
+    if (subData.errors && subData.errors.length > 0) {
       return {
         statusCode: 400,
         headers,
-        body: JSON.stringify({ error: subData.errors[0].description })
+        body: JSON.stringify({ error: 'Asaas Assinatura: ' + subData.errors[0].description })
       };
     }
 
