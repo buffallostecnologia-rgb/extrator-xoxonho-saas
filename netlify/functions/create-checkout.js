@@ -1,6 +1,6 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
-exports.handler = async (event, context) => {
+export async function handler(event, context) {
   const headers = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Headers': 'Content-Type',
@@ -108,4 +108,4 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({ error: 'Erro interno no servidor de pagamento: ' + err.message })
     };
   }
-};
+}

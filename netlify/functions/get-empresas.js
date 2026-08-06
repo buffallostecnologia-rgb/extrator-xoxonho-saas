@@ -1,6 +1,7 @@
-const { Client } = require('pg');
+import pg from 'pg';
+const { Client } = pg;
 
-exports.handler = async (event, context) => {
+export async function handler(event, context) {
   const headers = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Headers': 'Content-Type',
@@ -132,4 +133,4 @@ exports.handler = async (event, context) => {
       })
     };
   }
-};
+}
