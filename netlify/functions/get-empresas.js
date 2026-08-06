@@ -12,7 +12,7 @@ exports.handler = async (event, context) => {
     return { statusCode: 200, headers, body: '' };
   }
 
-  const rawDbUrl = process.env.DATABASE_URL || "postgresql://Buffallos_Tecnologia:WpAB2ws1UUPDd0GoC44jDA@saas-xoxonho-db-31345.j77.aws-us-west-2.cockroachlabs.cloud:26257/defaultdb";
+  const rawDbUrl = process.env.COCKROACH_DB_URL || process.env.DATABASE_URL || "postgresql://Buffallos_Tecnologia:WpAB2ws1UUPDd0GoC44jDA@saas-xoxonho-db-31345.j77.aws-us-west-2.cockroachlabs.cloud:26257/defaultdb";
   // Remove qualquer sslmode da string para a opção ssl de pg assumir o controle total
   const connString = rawDbUrl.split('?')[0];
 
@@ -112,7 +112,7 @@ exports.handler = async (event, context) => {
       try { await client.end(); } catch (e) {}
     }
     return {
-      statusCode: 200, // Retorna status 200 com array vazio para o frontend cair gracioso e não dar erro 502
+      statusCode: 200,
       headers,
       body: JSON.stringify({
         total: 0,
