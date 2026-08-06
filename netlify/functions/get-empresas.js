@@ -13,12 +13,21 @@ exports.handler = async (event, context) => {
   }
 
   const rawDbUrl = process.env.COCKROACH_DB_URL || process.env.DATABASE_URL || "postgresql://Buffallos_Tecnologia:WpAB2ws1UUPDd0GoC44jDA@saas-xoxonho-db-31345.j77.aws-us-west-2.cockroachlabs.cloud:26257/defaultdb";
-  // Remove qualquer sslmode da string para a opção ssl de pg assumir o controle total
+  
+  let hostName = "saas-xoxonho-db-31345.j77.aws-us-west-2.cockroachlabs.cloud";
+  try {
+    const parsed = new URL(rawDbUrl);
+    hostName = parsed.hostname;
+  } catch (e) {}
+
   const connString = rawDbUrl.split('?')[0];
 
   const client = new Client({
     connectionString: connString,
-    ssl: { rejectUnauthorized: false },
+    ssl: { 
+      rejectUnauthorized: false,
+      servername: hostName
+    },
     connectionTimeoutMillis: 8000
   });
 
