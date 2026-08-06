@@ -237,7 +237,7 @@ export default function LandingPage({ onGoToLogin }) {
                   </li>
                   <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                    <span>Exportação para <strong>CSV (Excel)</strong> e <strong>Google Sheets</strong></span>
+                    <span>Salvamento de Pesquisas em <strong>Minhas Listas Pessoais</strong></span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />

@@ -308,28 +308,10 @@ Posso fornecer o diagnóstico de forma gratuita.`;
           <button
             onClick={() => setShowSaveListModal(true)}
             disabled={filteredData.length === 0}
-            className="py-2 px-3 rounded-xl bg-purple-600/20 hover:bg-purple-600/30 text-purple-300 border border-purple-500/30 text-xs font-semibold flex items-center gap-1.5 transition-all disabled:opacity-50"
-          >
-            <FolderPlus className="w-4 h-4 text-purple-400" />
-            <span>Salvar em Minhas Listas</span>
-          </button>
-
-          <button
-            onClick={() => setShowSheetsModal(true)}
-            disabled={filteredData.length === 0}
-            className="py-2 px-3 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 text-xs font-semibold flex items-center gap-1.5 transition-all disabled:opacity-50"
-          >
-            <FileSpreadsheet className="w-4 h-4 text-emerald-400" />
-            <span>Compartilhar Sheets</span>
-          </button>
-
-          <button
-            onClick={handleDownloadCSV}
-            disabled={filteredData.length === 0}
             className="py-2 px-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-xs font-bold flex items-center gap-1.5 transition-all shadow-md shadow-blue-600/20 disabled:opacity-50"
           >
-            <Download className="w-4 h-4" />
-            <span>Baixar CSV ({filteredData.length.toLocaleString()})</span>
+            <FolderPlus className="w-4 h-4" />
+            <span>Salvar em Minhas Listas</span>
           </button>
         </div>
       </div>
