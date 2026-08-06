@@ -1,0 +1,3872 @@
+[
+  {
+    "pasta_cidade": "sao_paulo",
+    "nome_cidade": "Sao Paulo",
+    "total_empresas": 2634277,
+    "total_arquivos": 527
+  },
+  {
+    "pasta_cidade": "campinas",
+    "nome_cidade": "Campinas",
+    "total_empresas": 219889,
+    "total_arquivos": 44
+  },
+  {
+    "pasta_cidade": "guarulhos",
+    "nome_cidade": "Guarulhos",
+    "total_empresas": 194893,
+    "total_arquivos": 39
+  },
+  {
+    "pasta_cidade": "ribeirao_preto",
+    "nome_cidade": "Ribeirao Preto",
+    "total_empresas": 148188,
+    "total_arquivos": 30
+  },
+  {
+    "pasta_cidade": "sorocaba",
+    "nome_cidade": "Sorocaba",
+    "total_empresas": 132463,
+    "total_arquivos": 27
+  },
+  {
+    "pasta_cidade": "sao_bernardo_do_campo",
+    "nome_cidade": "Sao Bernardo Do Campo",
+    "total_empresas": 126358,
+    "total_arquivos": 26
+  },
+  {
+    "pasta_cidade": "santo_andre",
+    "nome_cidade": "Santo Andre",
+    "total_empresas": 121739,
+    "total_arquivos": 25
+  },
+  {
+    "pasta_cidade": "sao_jose_dos_campos",
+    "nome_cidade": "Sao Jose Dos Campos",
+    "total_empresas": 118551,
+    "total_arquivos": 24
+  },
+  {
+    "pasta_cidade": "osasco",
+    "nome_cidade": "Osasco",
+    "total_empresas": 110942,
+    "total_arquivos": 23
+  },
+  {
+    "pasta_cidade": "sao_jose_do_rio_preto",
+    "nome_cidade": "Sao Jose Do Rio Preto",
+    "total_empresas": 102141,
+    "total_arquivos": 21
+  },
+  {
+    "pasta_cidade": "jundiai",
+    "nome_cidade": "Jundiai",
+    "total_empresas": 86494,
+    "total_arquivos": 18
+  },
+  {
+    "pasta_cidade": "santos",
+    "nome_cidade": "Santos",
+    "total_empresas": 84022,
+    "total_arquivos": 17
+  },
+  {
+    "pasta_cidade": "barueri",
+    "nome_cidade": "Barueri",
+    "total_empresas": 77172,
+    "total_arquivos": 16
+  },
+  {
+    "pasta_cidade": "mogi_das_cruzes",
+    "nome_cidade": "Mogi Das Cruzes",
+    "total_empresas": 70814,
+    "total_arquivos": 15
+  },
+  {
+    "pasta_cidade": "bauru",
+    "nome_cidade": "Bauru",
+    "total_empresas": 69225,
+    "total_arquivos": 14
+  },
+  {
+    "pasta_cidade": "franca",
+    "nome_cidade": "Franca",
+    "total_empresas": 68957,
+    "total_arquivos": 14
+  },
+  {
+    "pasta_cidade": "piracicaba",
+    "nome_cidade": "Piracicaba",
+    "total_empresas": 67818,
+    "total_arquivos": 14
+  },
+  {
+    "pasta_cidade": "praia_grande",
+    "nome_cidade": "Praia Grande",
+    "total_empresas": 60528,
+    "total_arquivos": 13
+  },
+  {
+    "pasta_cidade": "limeira",
+    "nome_cidade": "Limeira",
+    "total_empresas": 53007,
+    "total_arquivos": 11
+  },
+  {
+    "pasta_cidade": "diadema",
+    "nome_cidade": "Diadema",
+    "total_empresas": 50341,
+    "total_arquivos": 11
+  },
+  {
+    "pasta_cidade": "sao_vicente",
+    "nome_cidade": "Sao Vicente",
+    "total_empresas": 48977,
+    "total_arquivos": 10
+  },
+  {
+    "pasta_cidade": "indaiatuba",
+    "nome_cidade": "Indaiatuba",
+    "total_empresas": 48602,
+    "total_arquivos": 10
+  },
+  {
+    "pasta_cidade": "carapicuiba",
+    "nome_cidade": "Carapicuiba",
+    "total_empresas": 47991,
+    "total_arquivos": 10
+  },
+  {
+    "pasta_cidade": "cotia",
+    "nome_cidade": "Cotia",
+    "total_empresas": 46786,
+    "total_arquivos": 10
+  },
+  {
+    "pasta_cidade": "taubate",
+    "nome_cidade": "Taubate",
+    "total_empresas": 46432,
+    "total_arquivos": 10
+  },
+  {
+    "pasta_cidade": "maua",
+    "nome_cidade": "Maua",
+    "total_empresas": 45995,
+    "total_arquivos": 10
+  },
+  {
+    "pasta_cidade": "sao_carlos",
+    "nome_cidade": "Sao Carlos",
+    "total_empresas": 44961,
+    "total_arquivos": 9
+  },
+  {
+    "pasta_cidade": "guaruja",
+    "nome_cidade": "Guaruja",
+    "total_empresas": 44959,
+    "total_arquivos": 9
+  },
+  {
+    "pasta_cidade": "americana",
+    "nome_cidade": "Americana",
+    "total_empresas": 44310,
+    "total_arquivos": 9
+  },
+  {
+    "pasta_cidade": "suzano",
+    "nome_cidade": "Suzano",
+    "total_empresas": 43554,
+    "total_arquivos": 9
+  },
+  {
+    "pasta_cidade": "marilia",
+    "nome_cidade": "Marilia",
+    "total_empresas": 43288,
+    "total_arquivos": 9
+  },
+  {
+    "pasta_cidade": "presidente_prudente",
+    "nome_cidade": "Presidente Prudente",
+    "total_empresas": 41972,
+    "total_arquivos": 9
+  },
+  {
+    "pasta_cidade": "sumare",
+    "nome_cidade": "Sumare",
+    "total_empresas": 40798,
+    "total_arquivos": 9
+  },
+  {
+    "pasta_cidade": "itaquaquecetuba",
+    "nome_cidade": "Itaquaquecetuba",
+    "total_empresas": 39469,
+    "total_arquivos": 8
+  },
+  {
+    "pasta_cidade": "araraquara",
+    "nome_cidade": "Araraquara",
+    "total_empresas": 38974,
+    "total_arquivos": 8
+  },
+  {
+    "pasta_cidade": "taboao_da_serra",
+    "nome_cidade": "Taboao Da Serra",
+    "total_empresas": 38562,
+    "total_arquivos": 8
+  },
+  {
+    "pasta_cidade": "sao_caetano_do_sul",
+    "nome_cidade": "Sao Caetano Do Sul",
+    "total_empresas": 38091,
+    "total_arquivos": 8
+  },
+  {
+    "pasta_cidade": "aracatuba",
+    "nome_cidade": "Aracatuba",
+    "total_empresas": 37355,
+    "total_arquivos": 8
+  },
+  {
+    "pasta_cidade": "hortolandia",
+    "nome_cidade": "Hortolandia",
+    "total_empresas": 36186,
+    "total_arquivos": 8
+  },
+  {
+    "pasta_cidade": "atibaia",
+    "nome_cidade": "Atibaia",
+    "total_empresas": 33867,
+    "total_arquivos": 7
+  },
+  {
+    "pasta_cidade": "jacarei",
+    "nome_cidade": "Jacarei",
+    "total_empresas": 33622,
+    "total_arquivos": 7
+  },
+  {
+    "pasta_cidade": "braganca_paulista",
+    "nome_cidade": "Braganca Paulista",
+    "total_empresas": 32550,
+    "total_arquivos": 7
+  },
+  {
+    "pasta_cidade": "embu_das_artes",
+    "nome_cidade": "Embu Das Artes",
+    "total_empresas": 31088,
+    "total_arquivos": 7
+  },
+  {
+    "pasta_cidade": "santana_de_parnaiba",
+    "nome_cidade": "Santana De Parnaiba",
+    "total_empresas": 29806,
+    "total_arquivos": 6
+  },
+  {
+    "pasta_cidade": "rio_claro",
+    "nome_cidade": "Rio Claro",
+    "total_empresas": 29673,
+    "total_arquivos": 6
+  },
+  {
+    "pasta_cidade": "itu",
+    "nome_cidade": "Itu",
+    "total_empresas": 26766,
+    "total_arquivos": 6
+  },
+  {
+    "pasta_cidade": "itapevi",
+    "nome_cidade": "Itapevi",
+    "total_empresas": 25681,
+    "total_arquivos": 6
+  },
+  {
+    "pasta_cidade": "santa_barbara_d_oeste",
+    "nome_cidade": "Santa Barbara D Oeste",
+    "total_empresas": 25526,
+    "total_arquivos": 6
+  },
+  {
+    "pasta_cidade": "valinhos",
+    "nome_cidade": "Valinhos",
+    "total_empresas": 24927,
+    "total_arquivos": 5
+  },
+  {
+    "pasta_cidade": "botucatu",
+    "nome_cidade": "Botucatu",
+    "total_empresas": 24493,
+    "total_arquivos": 5
+  },
+  {
+    "pasta_cidade": "itapetininga",
+    "nome_cidade": "Itapetininga",
+    "total_empresas": 22635,
+    "total_arquivos": 5
+  },
+  {
+    "pasta_cidade": "mogi_guacu",
+    "nome_cidade": "Mogi Guacu",
+    "total_empresas": 21904,
+    "total_arquivos": 5
+  },
+  {
+    "pasta_cidade": "birigui",
+    "nome_cidade": "Birigui",
+    "total_empresas": 21139,
+    "total_arquivos": 5
+  },
+  {
+    "pasta_cidade": "caraguatatuba",
+    "nome_cidade": "Caraguatatuba",
+    "total_empresas": 20966,
+    "total_arquivos": 5
+  },
+  {
+    "pasta_cidade": "sertaozinho",
+    "nome_cidade": "Sertaozinho",
+    "total_empresas": 20902,
+    "total_arquivos": 5
+  },
+  {
+    "pasta_cidade": "barretos",
+    "nome_cidade": "Barretos",
+    "total_empresas": 20829,
+    "total_arquivos": 5
+  },
+  {
+    "pasta_cidade": "pindamonhangaba",
+    "nome_cidade": "Pindamonhangaba",
+    "total_empresas": 20598,
+    "total_arquivos": 5
+  },
+  {
+    "pasta_cidade": "jau",
+    "nome_cidade": "Jau",
+    "total_empresas": 20185,
+    "total_arquivos": 5
+  },
+  {
+    "pasta_cidade": "araras",
+    "nome_cidade": "Araras",
+    "total_empresas": 19842,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "ferraz_de_vasconcelos",
+    "nome_cidade": "Ferraz De Vasconcelos",
+    "total_empresas": 19500,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "salto",
+    "nome_cidade": "Salto",
+    "total_empresas": 19472,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "catanduva",
+    "nome_cidade": "Catanduva",
+    "total_empresas": 19238,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "itapecerica_da_serra",
+    "nome_cidade": "Itapecerica Da Serra",
+    "total_empresas": 18506,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "paulinia",
+    "nome_cidade": "Paulinia",
+    "total_empresas": 18500,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "assis",
+    "nome_cidade": "Assis",
+    "total_empresas": 18449,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "itatiba",
+    "nome_cidade": "Itatiba",
+    "total_empresas": 18429,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "tatui",
+    "nome_cidade": "Tatui",
+    "total_empresas": 18050,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "votorantim",
+    "nome_cidade": "Votorantim",
+    "total_empresas": 17892,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "ubatuba",
+    "nome_cidade": "Ubatuba",
+    "total_empresas": 17615,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "sao_joao_da_boa_vista",
+    "nome_cidade": "Sao Joao Da Boa Vista",
+    "total_empresas": 16777,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "votuporanga",
+    "nome_cidade": "Votuporanga",
+    "total_empresas": 16444,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "francisco_morato",
+    "nome_cidade": "Francisco Morato",
+    "total_empresas": 16329,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "ourinhos",
+    "nome_cidade": "Ourinhos",
+    "total_empresas": 16185,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "guaratingueta",
+    "nome_cidade": "Guaratingueta",
+    "total_empresas": 16175,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "poa",
+    "nome_cidade": "Poa",
+    "total_empresas": 16121,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "vinhedo",
+    "nome_cidade": "Vinhedo",
+    "total_empresas": 15860,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "mogi_mirim",
+    "nome_cidade": "Mogi Mirim",
+    "total_empresas": 15437,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "itanhaem",
+    "nome_cidade": "Itanhaem",
+    "total_empresas": 15177,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "leme",
+    "nome_cidade": "Leme",
+    "total_empresas": 15025,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "varzea_paulista",
+    "nome_cidade": "Varzea Paulista",
+    "total_empresas": 15024,
+    "total_arquivos": 4
+  },
+  {
+    "pasta_cidade": "franco_da_rocha",
+    "nome_cidade": "Franco Da Rocha",
+    "total_empresas": 14996,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "itapeva",
+    "nome_cidade": "Itapeva",
+    "total_empresas": 14843,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "ribeirao_pires",
+    "nome_cidade": "Ribeirao Pires",
+    "total_empresas": 14583,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "avare",
+    "nome_cidade": "Avare",
+    "total_empresas": 14567,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "jandira",
+    "nome_cidade": "Jandira",
+    "total_empresas": 14362,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "cubatao",
+    "nome_cidade": "Cubatao",
+    "total_empresas": 14153,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "cajamar",
+    "nome_cidade": "Cajamar",
+    "total_empresas": 14053,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "aruja",
+    "nome_cidade": "Aruja",
+    "total_empresas": 13980,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "caieiras",
+    "nome_cidade": "Caieiras",
+    "total_empresas": 13377,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "sao_roque",
+    "nome_cidade": "Sao Roque",
+    "total_empresas": 13304,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "sao_sebastiao",
+    "nome_cidade": "Sao Sebastiao",
+    "total_empresas": 12833,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "ibiuna",
+    "nome_cidade": "Ibiuna",
+    "total_empresas": 12791,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "ibitinga",
+    "nome_cidade": "Ibitinga",
+    "total_empresas": 12408,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "jaboticabal",
+    "nome_cidade": "Jaboticabal",
+    "total_empresas": 12408,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "bebedouro",
+    "nome_cidade": "Bebedouro",
+    "total_empresas": 12401,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "mairipora",
+    "nome_cidade": "Mairipora",
+    "total_empresas": 12316,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "matao",
+    "nome_cidade": "Matao",
+    "total_empresas": 11794,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "itupeva",
+    "nome_cidade": "Itupeva",
+    "total_empresas": 11681,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "fernandopolis",
+    "nome_cidade": "Fernandopolis",
+    "total_empresas": 11600,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "cacapava",
+    "nome_cidade": "Cacapava",
+    "total_empresas": 11578,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "bertioga",
+    "nome_cidade": "Bertioga",
+    "total_empresas": 11493,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "boituva",
+    "nome_cidade": "Boituva",
+    "total_empresas": 11464,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "mirassol",
+    "nome_cidade": "Mirassol",
+    "total_empresas": 11355,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "piedade",
+    "nome_cidade": "Piedade",
+    "total_empresas": 11215,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "peruibe",
+    "nome_cidade": "Peruibe",
+    "total_empresas": 11085,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "amparo",
+    "nome_cidade": "Amparo",
+    "total_empresas": 10997,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "lins",
+    "nome_cidade": "Lins",
+    "total_empresas": 10911,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "olimpia",
+    "nome_cidade": "Olimpia",
+    "total_empresas": 10803,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "lencois_paulista",
+    "nome_cidade": "Lencois Paulista",
+    "total_empresas": 10614,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "jaguariuna",
+    "nome_cidade": "Jaguariuna",
+    "total_empresas": 10514,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "pirassununga",
+    "nome_cidade": "Pirassununga",
+    "total_empresas": 10504,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "socorro",
+    "nome_cidade": "Socorro",
+    "total_empresas": 10374,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "lorena",
+    "nome_cidade": "Lorena",
+    "total_empresas": 10341,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "tupa",
+    "nome_cidade": "Tupa",
+    "total_empresas": 10236,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "jales",
+    "nome_cidade": "Jales",
+    "total_empresas": 10208,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "itapira",
+    "nome_cidade": "Itapira",
+    "total_empresas": 10180,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "penapolis",
+    "nome_cidade": "Penapolis",
+    "total_empresas": 10012,
+    "total_arquivos": 3
+  },
+  {
+    "pasta_cidade": "porto_feliz",
+    "nome_cidade": "Porto Feliz",
+    "total_empresas": 9908,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "campo_limpo_paulista",
+    "nome_cidade": "Campo Limpo Paulista",
+    "total_empresas": 9903,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "mococa",
+    "nome_cidade": "Mococa",
+    "total_empresas": 9897,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "batatais",
+    "nome_cidade": "Batatais",
+    "total_empresas": 9777,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "nova_odessa",
+    "nome_cidade": "Nova Odessa",
+    "total_empresas": 9764,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "mongagua",
+    "nome_cidade": "Mongagua",
+    "total_empresas": 9658,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "santa_cruz_do_rio_pardo",
+    "nome_cidade": "Santa Cruz Do Rio Pardo",
+    "total_empresas": 9602,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "andradina",
+    "nome_cidade": "Andradina",
+    "total_empresas": 9594,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "monte_mor",
+    "nome_cidade": "Monte Mor",
+    "total_empresas": 9509,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "sao_jose_do_rio_pardo",
+    "nome_cidade": "Sao Jose Do Rio Pardo",
+    "total_empresas": 9057,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "taquaritinga",
+    "nome_cidade": "Taquaritinga",
+    "total_empresas": 9029,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "campos_do_jordao",
+    "nome_cidade": "Campos Do Jordao",
+    "total_empresas": 8827,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "porto_ferreira",
+    "nome_cidade": "Porto Ferreira",
+    "total_empresas": 8800,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "artur_nogueira",
+    "nome_cidade": "Artur Nogueira",
+    "total_empresas": 8785,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "cruzeiro",
+    "nome_cidade": "Cruzeiro",
+    "total_empresas": 8736,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "vargem_grande_paulista",
+    "nome_cidade": "Vargem Grande Paulista",
+    "total_empresas": 8674,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "monte_alto",
+    "nome_cidade": "Monte Alto",
+    "total_empresas": 8662,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "itapolis",
+    "nome_cidade": "Itapolis",
+    "total_empresas": 8539,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "jose_bonifacio",
+    "nome_cidade": "Jose Bonifacio",
+    "total_empresas": 8423,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "registro",
+    "nome_cidade": "Registro",
+    "total_empresas": 8347,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "dracena",
+    "nome_cidade": "Dracena",
+    "total_empresas": 8235,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "embu_guacu",
+    "nome_cidade": "Embu Guacu",
+    "total_empresas": 7903,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "sao_miguel_arcanjo",
+    "nome_cidade": "Sao Miguel Arcanjo",
+    "total_empresas": 7566,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "presidente_epitacio",
+    "nome_cidade": "Presidente Epitacio",
+    "total_empresas": 7501,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "cerquilho",
+    "nome_cidade": "Cerquilho",
+    "total_empresas": 7397,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "capao_bonito",
+    "nome_cidade": "Capao Bonito",
+    "total_empresas": 7374,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "pedreira",
+    "nome_cidade": "Pedreira",
+    "total_empresas": 7317,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "santa_isabel",
+    "nome_cidade": "Santa Isabel",
+    "total_empresas": 7240,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "garca",
+    "nome_cidade": "Garca",
+    "total_empresas": 7233,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "louveira",
+    "nome_cidade": "Louveira",
+    "total_empresas": 7171,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "tiete",
+    "nome_cidade": "Tiete",
+    "total_empresas": 7170,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "novo_horizonte",
+    "nome_cidade": "Novo Horizonte",
+    "total_empresas": 7151,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "paraguacu_paulista",
+    "nome_cidade": "Paraguacu Paulista",
+    "total_empresas": 7070,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "jardinopolis",
+    "nome_cidade": "Jardinopolis",
+    "total_empresas": 7068,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "itarare",
+    "nome_cidade": "Itarare",
+    "total_empresas": 6980,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "sao_pedro",
+    "nome_cidade": "Sao Pedro",
+    "total_empresas": 6977,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "espirito_santo_do_pinhal",
+    "nome_cidade": "Espirito Santo Do Pinhal",
+    "total_empresas": 6958,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "ilhabela",
+    "nome_cidade": "Ilhabela",
+    "total_empresas": 6880,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "pederneiras",
+    "nome_cidade": "Pederneiras",
+    "total_empresas": 6831,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "sao_joaquim_da_barra",
+    "nome_cidade": "Sao Joaquim Da Barra",
+    "total_empresas": 6815,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "capivari",
+    "nome_cidade": "Capivari",
+    "total_empresas": 6794,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "cosmopolis",
+    "nome_cidade": "Cosmopolis",
+    "total_empresas": 6694,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "mairinque",
+    "nome_cidade": "Mairinque",
+    "total_empresas": 6674,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "santa_fe_do_sul",
+    "nome_cidade": "Santa Fe Do Sul",
+    "total_empresas": 6617,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "serrana",
+    "nome_cidade": "Serrana",
+    "total_empresas": 6583,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "cabreuva",
+    "nome_cidade": "Cabreuva",
+    "total_empresas": 6471,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "promissao",
+    "nome_cidade": "Promissao",
+    "total_empresas": 6459,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "guaira",
+    "nome_cidade": "Guaira",
+    "total_empresas": 6450,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "adamantina",
+    "nome_cidade": "Adamantina",
+    "total_empresas": 6342,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "vargem_grande_do_sul",
+    "nome_cidade": "Vargem Grande Do Sul",
+    "total_empresas": 6302,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "aracoiaba_da_serra",
+    "nome_cidade": "Aracoiaba Da Serra",
+    "total_empresas": 6180,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "tanabi",
+    "nome_cidade": "Tanabi",
+    "total_empresas": 6154,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "descalvado",
+    "nome_cidade": "Descalvado",
+    "total_empresas": 6135,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "serra_negra",
+    "nome_cidade": "Serra Negra",
+    "total_empresas": 6025,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "agudos",
+    "nome_cidade": "Agudos",
+    "total_empresas": 6017,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "jarinu",
+    "nome_cidade": "Jarinu",
+    "total_empresas": 5895,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "cunha",
+    "nome_cidade": "Cunha",
+    "total_empresas": 5891,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "candido_mota",
+    "nome_cidade": "Candido Mota",
+    "total_empresas": 5884,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "cravinhos",
+    "nome_cidade": "Cravinhos",
+    "total_empresas": 5857,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "bady_bassitt",
+    "nome_cidade": "Bady Bassitt",
+    "total_empresas": 5849,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "presidente_venceslau",
+    "nome_cidade": "Presidente Venceslau",
+    "total_empresas": 5760,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "caconde",
+    "nome_cidade": "Caconde",
+    "total_empresas": 5725,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "ituverava",
+    "nome_cidade": "Ituverava",
+    "total_empresas": 5678,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "monte_aprazivel",
+    "nome_cidade": "Monte Aprazivel",
+    "total_empresas": 5660,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "barra_bonita",
+    "nome_cidade": "Barra Bonita",
+    "total_empresas": 5611,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "bariri",
+    "nome_cidade": "Bariri",
+    "total_empresas": 5555,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "osvaldo_cruz",
+    "nome_cidade": "Osvaldo Cruz",
+    "total_empresas": 5532,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "aparecida",
+    "nome_cidade": "Aparecida",
+    "total_empresas": 5473,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "orlandia",
+    "nome_cidade": "Orlandia",
+    "total_empresas": 5463,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "salto_de_pirapora",
+    "nome_cidade": "Salto De Pirapora",
+    "total_empresas": 5460,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "tremembe",
+    "nome_cidade": "Tremembe",
+    "total_empresas": 5443,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "pilar_do_sul",
+    "nome_cidade": "Pilar Do Sul",
+    "total_empresas": 5365,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "rancharia",
+    "nome_cidade": "Rancharia",
+    "total_empresas": 5292,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "guararema",
+    "nome_cidade": "Guararema",
+    "total_empresas": 5270,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "sao_manuel",
+    "nome_cidade": "Sao Manuel",
+    "total_empresas": 5245,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "piracaia",
+    "nome_cidade": "Piracaia",
+    "total_empresas": 5220,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "alvares_machado",
+    "nome_cidade": "Alvares Machado",
+    "total_empresas": 5204,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "piraju",
+    "nome_cidade": "Piraju",
+    "total_empresas": 5132,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "guapiara",
+    "nome_cidade": "Guapiara",
+    "total_empresas": 5073,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "guararapes",
+    "nome_cidade": "Guararapes",
+    "total_empresas": 5061,
+    "total_arquivos": 2
+  },
+  {
+    "pasta_cidade": "guariba",
+    "nome_cidade": "Guariba",
+    "total_empresas": 4916,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "laranjal_paulista",
+    "nome_cidade": "Laranjal Paulista",
+    "total_empresas": 4873,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "palmital",
+    "nome_cidade": "Palmital",
+    "total_empresas": 4862,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "mirandopolis",
+    "nome_cidade": "Mirandopolis",
+    "total_empresas": 4861,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "aguai",
+    "nome_cidade": "Aguai",
+    "total_empresas": 4794,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "brodowski",
+    "nome_cidade": "Brodowski",
+    "total_empresas": 4757,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santa_rita_do_passa_quatro",
+    "nome_cidade": "Santa Rita Do Passa Quatro",
+    "total_empresas": 4640,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "angatuba",
+    "nome_cidade": "Angatuba",
+    "total_empresas": 4633,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "apiai",
+    "nome_cidade": "Apiai",
+    "total_empresas": 4611,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "mirante_do_paranapanema",
+    "nome_cidade": "Mirante Do Paranapanema",
+    "total_empresas": 4555,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "casa_branca",
+    "nome_cidade": "Casa Branca",
+    "total_empresas": 4471,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "itabera",
+    "nome_cidade": "Itabera",
+    "total_empresas": 4317,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "brotas",
+    "nome_cidade": "Brotas",
+    "total_empresas": 4313,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "itajobi",
+    "nome_cidade": "Itajobi",
+    "total_empresas": 4251,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pontal",
+    "nome_cidade": "Pontal",
+    "total_empresas": 4249,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "iguape",
+    "nome_cidade": "Iguape",
+    "total_empresas": 4226,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "morro_agudo",
+    "nome_cidade": "Morro Agudo",
+    "total_empresas": 4203,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pereira_barreto",
+    "nome_cidade": "Pereira Barreto",
+    "total_empresas": 4201,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "rio_das_pedras",
+    "nome_cidade": "Rio Das Pedras",
+    "total_empresas": 4181,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "auriflama",
+    "nome_cidade": "Auriflama",
+    "total_empresas": 4136,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "martinopolis",
+    "nome_cidade": "Martinopolis",
+    "total_empresas": 4122,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "cajuru",
+    "nome_cidade": "Cajuru",
+    "total_empresas": 4104,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "potirendaba",
+    "nome_cidade": "Potirendaba",
+    "total_empresas": 4104,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "buritama",
+    "nome_cidade": "Buritama",
+    "total_empresas": 4007,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "itai",
+    "nome_cidade": "Itai",
+    "total_empresas": 3999,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pitangueiras",
+    "nome_cidade": "Pitangueiras",
+    "total_empresas": 3979,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "rio_grande_da_serra",
+    "nome_cidade": "Rio Grande Da Serra",
+    "total_empresas": 3973,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "guapiacu",
+    "nome_cidade": "Guapiacu",
+    "total_empresas": 3963,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "dois_corregos",
+    "nome_cidade": "Dois Corregos",
+    "total_empresas": 3963,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "teodoro_sampaio",
+    "nome_cidade": "Teodoro Sampaio",
+    "total_empresas": 3953,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "taquarituba",
+    "nome_cidade": "Taquarituba",
+    "total_empresas": 3921,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "divinolandia",
+    "nome_cidade": "Divinolandia",
+    "total_empresas": 3907,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "cordeiropolis",
+    "nome_cidade": "Cordeiropolis",
+    "total_empresas": 3896,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ipero",
+    "nome_cidade": "Ipero",
+    "total_empresas": 3867,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "americo_brasiliense",
+    "nome_cidade": "Americo Brasiliense",
+    "total_empresas": 3859,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ribeirao_branco",
+    "nome_cidade": "Ribeirao Branco",
+    "total_empresas": 3835,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santa_rosa_de_viterbo",
+    "nome_cidade": "Santa Rosa De Viterbo",
+    "total_empresas": 3826,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "bom_jesus_dos_perdoes",
+    "nome_cidade": "Bom Jesus Dos Perdoes",
+    "total_empresas": 3825,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "castilho",
+    "nome_cidade": "Castilho",
+    "total_empresas": 3807,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ibate",
+    "nome_cidade": "Ibate",
+    "total_empresas": 3802,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santo_antonio_de_posse",
+    "nome_cidade": "Santo Antonio De Posse",
+    "total_empresas": 3790,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pirapozinho",
+    "nome_cidade": "Pirapozinho",
+    "total_empresas": 3788,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "aguas_de_lindoia",
+    "nome_cidade": "Aguas De Lindoia",
+    "total_empresas": 3756,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "junqueiropolis",
+    "nome_cidade": "Junqueiropolis",
+    "total_empresas": 3728,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ilha_solteira",
+    "nome_cidade": "Ilha Solteira",
+    "total_empresas": 3718,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "conchal",
+    "nome_cidade": "Conchal",
+    "total_empresas": 3701,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santo_anastacio",
+    "nome_cidade": "Santo Anastacio",
+    "total_empresas": 3660,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "borborema",
+    "nome_cidade": "Borborema",
+    "total_empresas": 3659,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "nova_granada",
+    "nome_cidade": "Nova Granada",
+    "total_empresas": 3648,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "biritiba_mirim",
+    "nome_cidade": "Biritiba Mirim",
+    "total_empresas": 3623,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pompeia",
+    "nome_cidade": "Pompeia",
+    "total_empresas": 3622,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "presidente_bernardes",
+    "nome_cidade": "Presidente Bernardes",
+    "total_empresas": 3603,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "holambra",
+    "nome_cidade": "Holambra",
+    "total_empresas": 3586,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "paranapanema",
+    "nome_cidade": "Paranapanema",
+    "total_empresas": 3582,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "cachoeira_paulista",
+    "nome_cidade": "Cachoeira Paulista",
+    "total_empresas": 3569,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "igarapava",
+    "nome_cidade": "Igarapava",
+    "total_empresas": 3541,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "conchas",
+    "nome_cidade": "Conchas",
+    "total_empresas": 3511,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "fartura",
+    "nome_cidade": "Fartura",
+    "total_empresas": 3493,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "buri",
+    "nome_cidade": "Buri",
+    "total_empresas": 3477,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "monte_azul_paulista",
+    "nome_cidade": "Monte Azul Paulista",
+    "total_empresas": 3471,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "barrinha",
+    "nome_cidade": "Barrinha",
+    "total_empresas": 3462,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "urupes",
+    "nome_cidade": "Urupes",
+    "total_empresas": 3432,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pinhalzinho",
+    "nome_cidade": "Pinhalzinho",
+    "total_empresas": 3431,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "regente_feijo",
+    "nome_cidade": "Regente Feijo",
+    "total_empresas": 3427,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "rosana",
+    "nome_cidade": "Rosana",
+    "total_empresas": 3413,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "cerqueira_cesar",
+    "nome_cidade": "Cerqueira Cesar",
+    "total_empresas": 3357,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "iracemapolis",
+    "nome_cidade": "Iracemapolis",
+    "total_empresas": 3292,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "juquitiba",
+    "nome_cidade": "Juquitiba",
+    "total_empresas": 3289,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pirajui",
+    "nome_cidade": "Pirajui",
+    "total_empresas": 3284,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "piratininga",
+    "nome_cidade": "Piratininga",
+    "total_empresas": 3268,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "nhandeara",
+    "nome_cidade": "Nhandeara",
+    "total_empresas": 3240,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "aracariguama",
+    "nome_cidade": "Aracariguama",
+    "total_empresas": 3173,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "altinopolis",
+    "nome_cidade": "Altinopolis",
+    "total_empresas": 3166,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santa_cruz_das_palmeiras",
+    "nome_cidade": "Santa Cruz Das Palmeiras",
+    "total_empresas": 3164,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "tabatinga",
+    "nome_cidade": "Tabatinga",
+    "total_empresas": 3145,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "tambau",
+    "nome_cidade": "Tambau",
+    "total_empresas": 3126,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "lucelia",
+    "nome_cidade": "Lucelia",
+    "total_empresas": 3101,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "cajati",
+    "nome_cidade": "Cajati",
+    "total_empresas": 3091,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "miracatu",
+    "nome_cidade": "Miracatu",
+    "total_empresas": 3079,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "capela_do_alto",
+    "nome_cidade": "Capela Do Alto",
+    "total_empresas": 3078,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "tupi_paulista",
+    "nome_cidade": "Tupi Paulista",
+    "total_empresas": 3071,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sao_luiz_do_paraitinga",
+    "nome_cidade": "Sao Luiz Do Paraitinga",
+    "total_empresas": 3044,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "cedral",
+    "nome_cidade": "Cedral",
+    "total_empresas": 3038,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "miguelopolis",
+    "nome_cidade": "Miguelopolis",
+    "total_empresas": 3024,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "paraibuna",
+    "nome_cidade": "Paraibuna",
+    "total_empresas": 3013,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "engenheiro_coelho",
+    "nome_cidade": "Engenheiro Coelho",
+    "total_empresas": 3012,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santa_gertrudes",
+    "nome_cidade": "Santa Gertrudes",
+    "total_empresas": 2996,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pedregulho",
+    "nome_cidade": "Pedregulho",
+    "total_empresas": 2984,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "cardoso",
+    "nome_cidade": "Cardoso",
+    "total_empresas": 2983,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pradopolis",
+    "nome_cidade": "Pradopolis",
+    "total_empresas": 2980,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "elias_fausto",
+    "nome_cidade": "Elias Fausto",
+    "total_empresas": 2967,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "bastos",
+    "nome_cidade": "Bastos",
+    "total_empresas": 2939,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "cafelandia",
+    "nome_cidade": "Cafelandia",
+    "total_empresas": 2933,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "joanopolis",
+    "nome_cidade": "Joanopolis",
+    "total_empresas": 2898,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "bofete",
+    "nome_cidade": "Bofete",
+    "total_empresas": 2884,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "cosmorama",
+    "nome_cidade": "Cosmorama",
+    "total_empresas": 2871,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "valentim_gentil",
+    "nome_cidade": "Valentim Gentil",
+    "total_empresas": 2845,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "colina",
+    "nome_cidade": "Colina",
+    "total_empresas": 2845,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "valparaiso",
+    "nome_cidade": "Valparaiso",
+    "total_empresas": 2816,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "palestina",
+    "nome_cidade": "Palestina",
+    "total_empresas": 2812,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "patrocinio_paulista",
+    "nome_cidade": "Patrocinio Paulista",
+    "total_empresas": 2804,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pariquera_acu",
+    "nome_cidade": "Pariquera Acu",
+    "total_empresas": 2784,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "palmeira_d_oeste",
+    "nome_cidade": "Palmeira D Oeste",
+    "total_empresas": 2781,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sao_bento_do_sapucai",
+    "nome_cidade": "Sao Bento Do Sapucai",
+    "total_empresas": 2773,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "nazare_paulista",
+    "nome_cidade": "Nazare Paulista",
+    "total_empresas": 2764,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "taruma",
+    "nome_cidade": "Taruma",
+    "total_empresas": 2761,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "itaporanga",
+    "nome_cidade": "Itaporanga",
+    "total_empresas": 2742,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "cesario_lange",
+    "nome_cidade": "Cesario Lange",
+    "total_empresas": 2729,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "itatinga",
+    "nome_cidade": "Itatinga",
+    "total_empresas": 2711,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "arealva",
+    "nome_cidade": "Arealva",
+    "total_empresas": 2700,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "viradouro",
+    "nome_cidade": "Viradouro",
+    "total_empresas": 2681,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pirangi",
+    "nome_cidade": "Pirangi",
+    "total_empresas": 2679,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "juquia",
+    "nome_cidade": "Juquia",
+    "total_empresas": 2659,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "maracai",
+    "nome_cidade": "Maracai",
+    "total_empresas": 2647,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "eldorado",
+    "nome_cidade": "Eldorado",
+    "total_empresas": 2625,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sete_barras",
+    "nome_cidade": "Sete Barras",
+    "total_empresas": 2589,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ibira",
+    "nome_cidade": "Ibira",
+    "total_empresas": 2588,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "salesopolis",
+    "nome_cidade": "Salesopolis",
+    "total_empresas": 2573,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "parapua",
+    "nome_cidade": "Parapua",
+    "total_empresas": 2569,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "panorama",
+    "nome_cidade": "Panorama",
+    "total_empresas": 2563,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "guarei",
+    "nome_cidade": "Guarei",
+    "total_empresas": 2549,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "morungaba",
+    "nome_cidade": "Morungaba",
+    "total_empresas": 2505,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "guara",
+    "nome_cidade": "Guara",
+    "total_empresas": 2472,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ilha_comprida",
+    "nome_cidade": "Ilha Comprida",
+    "total_empresas": 2455,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "estrela_d_oeste",
+    "nome_cidade": "Estrela D Oeste",
+    "total_empresas": 2403,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "balsamo",
+    "nome_cidade": "Balsamo",
+    "total_empresas": 2398,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "tabapua",
+    "nome_cidade": "Tabapua",
+    "total_empresas": 2382,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "igaracu_do_tiete",
+    "nome_cidade": "Igaracu Do Tiete",
+    "total_empresas": 2377,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "rinopolis",
+    "nome_cidade": "Rinopolis",
+    "total_empresas": 2354,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "macatuba",
+    "nome_cidade": "Macatuba",
+    "total_empresas": 2352,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "porangaba",
+    "nome_cidade": "Porangaba",
+    "total_empresas": 2351,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "duartina",
+    "nome_cidade": "Duartina",
+    "total_empresas": 2344,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sao_simao",
+    "nome_cidade": "Sao Simao",
+    "total_empresas": 2331,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "jacupiranga",
+    "nome_cidade": "Jacupiranga",
+    "total_empresas": 2324,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sarapui",
+    "nome_cidade": "Sarapui",
+    "total_empresas": 2314,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "general_salgado",
+    "nome_cidade": "General Salgado",
+    "total_empresas": 2303,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santa_adelia",
+    "nome_cidade": "Santa Adelia",
+    "total_empresas": 2295,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "charqueada",
+    "nome_cidade": "Charqueada",
+    "total_empresas": 2271,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pedra_bela",
+    "nome_cidade": "Pedra Bela",
+    "total_empresas": 2270,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sao_pedro_do_turvo",
+    "nome_cidade": "Sao Pedro Do Turvo",
+    "total_empresas": 2245,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "neves_paulista",
+    "nome_cidade": "Neves Paulista",
+    "total_empresas": 2245,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "uchoa",
+    "nome_cidade": "Uchoa",
+    "total_empresas": 2232,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santo_antonio_da_alegria",
+    "nome_cidade": "Santo Antonio Da Alegria",
+    "total_empresas": 2231,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pindorama",
+    "nome_cidade": "Pindorama",
+    "total_empresas": 2229,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "torrinha",
+    "nome_cidade": "Torrinha",
+    "total_empresas": 2220,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "macaubal",
+    "nome_cidade": "Macaubal",
+    "total_empresas": 2211,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pacaembu",
+    "nome_cidade": "Pacaembu",
+    "total_empresas": 2206,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pirapora_do_bom_jesus",
+    "nome_cidade": "Pirapora Do Bom Jesus",
+    "total_empresas": 2186,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sao_sebastiao_da_grama",
+    "nome_cidade": "Sao Sebastiao Da Grama",
+    "total_empresas": 2178,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "quata",
+    "nome_cidade": "Quata",
+    "total_empresas": 2086,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "iacanga",
+    "nome_cidade": "Iacanga",
+    "total_empresas": 2082,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pereiras",
+    "nome_cidade": "Pereiras",
+    "total_empresas": 2077,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santo_antonio_do_aracangua",
+    "nome_cidade": "Santo Antonio Do Aracangua",
+    "total_empresas": 2070,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "florida_paulista",
+    "nome_cidade": "Florida Paulista",
+    "total_empresas": 2066,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "urania",
+    "nome_cidade": "Urania",
+    "total_empresas": 2057,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ouroeste",
+    "nome_cidade": "Ouroeste",
+    "total_empresas": 2035,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "igarata",
+    "nome_cidade": "Igarata",
+    "total_empresas": 2029,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ribeirao_bonito",
+    "nome_cidade": "Ribeirao Bonito",
+    "total_empresas": 2007,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santo_antonio_do_pinhal",
+    "nome_cidade": "Santo Antonio Do Pinhal",
+    "total_empresas": 1994,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sales_oliveira",
+    "nome_cidade": "Sales Oliveira",
+    "total_empresas": 1967,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "monte_alegre_do_sul",
+    "nome_cidade": "Monte Alegre Do Sul",
+    "total_empresas": 1965,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "potim",
+    "nome_cidade": "Potim",
+    "total_empresas": 1960,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "guaicara",
+    "nome_cidade": "Guaicara",
+    "total_empresas": 1955,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "itirapina",
+    "nome_cidade": "Itirapina",
+    "total_empresas": 1943,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "cristais_paulista",
+    "nome_cidade": "Cristais Paulista",
+    "total_empresas": 1921,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "euclides_da_cunha_paulista",
+    "nome_cidade": "Euclides Da Cunha Paulista",
+    "total_empresas": 1910,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "manduri",
+    "nome_cidade": "Manduri",
+    "total_empresas": 1901,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "alvares_florence",
+    "nome_cidade": "Alvares Florence",
+    "total_empresas": 1887,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santa_branca",
+    "nome_cidade": "Santa Branca",
+    "total_empresas": 1885,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sao_lourenco_da_serra",
+    "nome_cidade": "Sao Lourenco Da Serra",
+    "total_empresas": 1867,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "guaracai",
+    "nome_cidade": "Guaracai",
+    "total_empresas": 1852,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "saltinho",
+    "nome_cidade": "Saltinho",
+    "total_empresas": 1849,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "severinia",
+    "nome_cidade": "Severinia",
+    "total_empresas": 1849,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "itapui",
+    "nome_cidade": "Itapui",
+    "total_empresas": 1846,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "taguai",
+    "nome_cidade": "Taguai",
+    "total_empresas": 1841,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "bilac",
+    "nome_cidade": "Bilac",
+    "total_empresas": 1839,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "bernardino_de_campos",
+    "nome_cidade": "Bernardino De Campos",
+    "total_empresas": 1834,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "mineiros_do_tiete",
+    "nome_cidade": "Mineiros Do Tiete",
+    "total_empresas": 1808,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "bocaina",
+    "nome_cidade": "Bocaina",
+    "total_empresas": 1804,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "jaci",
+    "nome_cidade": "Jaci",
+    "total_empresas": 1802,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "herculandia",
+    "nome_cidade": "Herculandia",
+    "total_empresas": 1802,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ipua",
+    "nome_cidade": "Ipua",
+    "total_empresas": 1792,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "natividade_da_serra",
+    "nome_cidade": "Natividade Da Serra",
+    "total_empresas": 1786,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "tapiratiba",
+    "nome_cidade": "Tapiratiba",
+    "total_empresas": 1772,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "dumont",
+    "nome_cidade": "Dumont",
+    "total_empresas": 1767,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "boa_esperanca_do_sul",
+    "nome_cidade": "Boa Esperanca Do Sul",
+    "total_empresas": 1760,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "cananeia",
+    "nome_cidade": "Cananeia",
+    "total_empresas": 1748,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "nuporanga",
+    "nome_cidade": "Nuporanga",
+    "total_empresas": 1745,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "vera_cruz",
+    "nome_cidade": "Vera Cruz",
+    "total_empresas": 1728,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santo_antonio_do_jardim",
+    "nome_cidade": "Santo Antonio Do Jardim",
+    "total_empresas": 1725,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "getulina",
+    "nome_cidade": "Getulina",
+    "total_empresas": 1718,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "riolandia",
+    "nome_cidade": "Riolandia",
+    "total_empresas": 1708,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ipaussu",
+    "nome_cidade": "Ipaussu",
+    "total_empresas": 1701,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "barra_do_chapeu",
+    "nome_cidade": "Barra Do Chapeu",
+    "total_empresas": 1691,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "guaraci",
+    "nome_cidade": "Guaraci",
+    "total_empresas": 1684,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "aluminio",
+    "nome_cidade": "Aluminio",
+    "total_empresas": 1665,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "poloni",
+    "nome_cidade": "Poloni",
+    "total_empresas": 1652,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "estiva_gerbi",
+    "nome_cidade": "Estiva Gerbi",
+    "total_empresas": 1648,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ibirarema",
+    "nome_cidade": "Ibirarema",
+    "total_empresas": 1634,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "lagoinha",
+    "nome_cidade": "Lagoinha",
+    "total_empresas": 1618,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "barra_do_turvo",
+    "nome_cidade": "Barra Do Turvo",
+    "total_empresas": 1616,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "luis_antonio",
+    "nome_cidade": "Luis Antonio",
+    "total_empresas": 1608,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "vargem",
+    "nome_cidade": "Vargem",
+    "total_empresas": 1604,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "iacri",
+    "nome_cidade": "Iacri",
+    "total_empresas": 1597,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "irapua",
+    "nome_cidade": "Irapua",
+    "total_empresas": 1590,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "echapora",
+    "nome_cidade": "Echapora",
+    "total_empresas": 1589,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "iepe",
+    "nome_cidade": "Iepe",
+    "total_empresas": 1585,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pardinho",
+    "nome_cidade": "Pardinho",
+    "total_empresas": 1576,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "nova_alianca",
+    "nome_cidade": "Nova Alianca",
+    "total_empresas": 1566,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "itariri",
+    "nome_cidade": "Itariri",
+    "total_empresas": 1562,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "fernando_prestes",
+    "nome_cidade": "Fernando Prestes",
+    "total_empresas": 1555,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "tuiuti",
+    "nome_cidade": "Tuiuti",
+    "total_empresas": 1552,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "chavantes",
+    "nome_cidade": "Chavantes",
+    "total_empresas": 1530,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sud_mennucci",
+    "nome_cidade": "Sud Mennucci",
+    "total_empresas": 1520,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "americo_de_campos",
+    "nome_cidade": "Americo De Campos",
+    "total_empresas": 1491,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "aguas_de_santa_barbara",
+    "nome_cidade": "Aguas De Santa Barbara",
+    "total_empresas": 1480,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "taciba",
+    "nome_cidade": "Taciba",
+    "total_empresas": 1479,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "cajobi",
+    "nome_cidade": "Cajobi",
+    "total_empresas": 1476,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "bananal",
+    "nome_cidade": "Bananal",
+    "total_empresas": 1449,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "aguas_da_prata",
+    "nome_cidade": "Aguas Da Prata",
+    "total_empresas": 1440,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "mendonca",
+    "nome_cidade": "Mendonca",
+    "total_empresas": 1431,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "roseira",
+    "nome_cidade": "Roseira",
+    "total_empresas": 1431,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "caiua",
+    "nome_cidade": "Caiua",
+    "total_empresas": 1430,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ipigua",
+    "nome_cidade": "Ipigua",
+    "total_empresas": 1427,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "dourado",
+    "nome_cidade": "Dourado",
+    "total_empresas": 1424,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santa_albertina",
+    "nome_cidade": "Santa Albertina",
+    "total_empresas": 1418,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pauliceia",
+    "nome_cidade": "Pauliceia",
+    "total_empresas": 1418,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "coroados",
+    "nome_cidade": "Coroados",
+    "total_empresas": 1416,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "tres_fronteiras",
+    "nome_cidade": "Tres Fronteiras",
+    "total_empresas": 1406,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "irapuru",
+    "nome_cidade": "Irapuru",
+    "total_empresas": 1403,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "alto_alegre",
+    "nome_cidade": "Alto Alegre",
+    "total_empresas": 1400,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ipeuna",
+    "nome_cidade": "Ipeuna",
+    "total_empresas": 1396,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "tapirai",
+    "nome_cidade": "Tapirai",
+    "total_empresas": 1385,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "colombia",
+    "nome_cidade": "Colombia",
+    "total_empresas": 1382,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "salto_grande",
+    "nome_cidade": "Salto Grande",
+    "total_empresas": 1372,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "piacatu",
+    "nome_cidade": "Piacatu",
+    "total_empresas": 1371,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "avanhandava",
+    "nome_cidade": "Avanhandava",
+    "total_empresas": 1341,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "terra_roxa",
+    "nome_cidade": "Terra Roxa",
+    "total_empresas": 1332,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "maraba_paulista",
+    "nome_cidade": "Maraba Paulista",
+    "total_empresas": 1322,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ribeirao_grande",
+    "nome_cidade": "Ribeirao Grande",
+    "total_empresas": 1321,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "campos_novos_paulista",
+    "nome_cidade": "Campos Novos Paulista",
+    "total_empresas": 1320,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "lindoia",
+    "nome_cidade": "Lindoia",
+    "total_empresas": 1315,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "paulo_de_faria",
+    "nome_cidade": "Paulo De Faria",
+    "total_empresas": 1308,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "macedonia",
+    "nome_cidade": "Macedonia",
+    "total_empresas": 1307,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "mirassolandia",
+    "nome_cidade": "Mirassolandia",
+    "total_empresas": 1306,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "itobi",
+    "nome_cidade": "Itobi",
+    "total_empresas": 1302,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "iaras",
+    "nome_cidade": "Iaras",
+    "total_empresas": 1286,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "arandu",
+    "nome_cidade": "Arandu",
+    "total_empresas": 1278,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "paraiso",
+    "nome_cidade": "Paraiso",
+    "total_empresas": 1278,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "rafard",
+    "nome_cidade": "Rafard",
+    "total_empresas": 1272,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "guzolandia",
+    "nome_cidade": "Guzolandia",
+    "total_empresas": 1265,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "guatapara",
+    "nome_cidade": "Guatapara",
+    "total_empresas": 1263,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "restinga",
+    "nome_cidade": "Restinga",
+    "total_empresas": 1262,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sales",
+    "nome_cidade": "Sales",
+    "total_empresas": 1255,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "riversul",
+    "nome_cidade": "Riversul",
+    "total_empresas": 1254,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "piquete",
+    "nome_cidade": "Piquete",
+    "total_empresas": 1252,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "vista_alegre_do_alto",
+    "nome_cidade": "Vista Alegre Do Alto",
+    "total_empresas": 1239,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "meridiano",
+    "nome_cidade": "Meridiano",
+    "total_empresas": 1238,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ribeirao_do_sul",
+    "nome_cidade": "Ribeirao Do Sul",
+    "total_empresas": 1238,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "aparecida_d_oeste",
+    "nome_cidade": "Aparecida D Oeste",
+    "total_empresas": 1234,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "galia",
+    "nome_cidade": "Galia",
+    "total_empresas": 1232,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "murutinga_do_sul",
+    "nome_cidade": "Murutinga Do Sul",
+    "total_empresas": 1227,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ouro_verde",
+    "nome_cidade": "Ouro Verde",
+    "total_empresas": 1226,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "reginopolis",
+    "nome_cidade": "Reginopolis",
+    "total_empresas": 1224,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "icem",
+    "nome_cidade": "Icem",
+    "total_empresas": 1216,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "anhembi",
+    "nome_cidade": "Anhembi",
+    "total_empresas": 1205,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "serra_azul",
+    "nome_cidade": "Serra Azul",
+    "total_empresas": 1199,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "taiuva",
+    "nome_cidade": "Taiuva",
+    "total_empresas": 1197,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pedranopolis",
+    "nome_cidade": "Pedranopolis",
+    "total_empresas": 1193,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "planalto",
+    "nome_cidade": "Planalto",
+    "total_empresas": 1191,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "rincao",
+    "nome_cidade": "Rincao",
+    "total_empresas": 1182,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "buritizal",
+    "nome_cidade": "Buritizal",
+    "total_empresas": 1179,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "anhumas",
+    "nome_cidade": "Anhumas",
+    "total_empresas": 1179,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "guaranta",
+    "nome_cidade": "Guaranta",
+    "total_empresas": 1179,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "jaborandi",
+    "nome_cidade": "Jaborandi",
+    "total_empresas": 1177,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "brauna",
+    "nome_cidade": "Brauna",
+    "total_empresas": 1166,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "indiana",
+    "nome_cidade": "Indiana",
+    "total_empresas": 1154,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "campina_do_monte_alegre",
+    "nome_cidade": "Campina Do Monte Alegre",
+    "total_empresas": 1154,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "nova_europa",
+    "nome_cidade": "Nova Europa",
+    "total_empresas": 1150,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "lavinia",
+    "nome_cidade": "Lavinia",
+    "total_empresas": 1150,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "queluz",
+    "nome_cidade": "Queluz",
+    "total_empresas": 1143,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sao_jose_da_bela_vista",
+    "nome_cidade": "Sao Jose Da Bela Vista",
+    "total_empresas": 1142,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "clementina",
+    "nome_cidade": "Clementina",
+    "total_empresas": 1138,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ariranha",
+    "nome_cidade": "Ariranha",
+    "total_empresas": 1137,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "alfredo_marcondes",
+    "nome_cidade": "Alfredo Marcondes",
+    "total_empresas": 1135,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "jambeiro",
+    "nome_cidade": "Jambeiro",
+    "total_empresas": 1134,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pedro_de_toledo",
+    "nome_cidade": "Pedro De Toledo",
+    "total_empresas": 1133,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "oriente",
+    "nome_cidade": "Oriente",
+    "total_empresas": 1124,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "tarabai",
+    "nome_cidade": "Tarabai",
+    "total_empresas": 1123,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "mira_estrela",
+    "nome_cidade": "Mira Estrela",
+    "total_empresas": 1121,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "nova_campina",
+    "nome_cidade": "Nova Campina",
+    "total_empresas": 1118,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "itapirapua_paulista",
+    "nome_cidade": "Itapirapua Paulista",
+    "total_empresas": 1110,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "quintana",
+    "nome_cidade": "Quintana",
+    "total_empresas": 1106,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ubirajara",
+    "nome_cidade": "Ubirajara",
+    "total_empresas": 1099,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "avai",
+    "nome_cidade": "Avai",
+    "total_empresas": 1091,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "orindiuva",
+    "nome_cidade": "Orindiuva",
+    "total_empresas": 1090,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "monteiro_lobato",
+    "nome_cidade": "Monteiro Lobato",
+    "total_empresas": 1089,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "indiapora",
+    "nome_cidade": "Indiapora",
+    "total_empresas": 1079,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "monte_castelo",
+    "nome_cidade": "Monte Castelo",
+    "total_empresas": 1070,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "corumbatai",
+    "nome_cidade": "Corumbatai",
+    "total_empresas": 1066,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "piquerobi",
+    "nome_cidade": "Piquerobi",
+    "total_empresas": 1062,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "taiacu",
+    "nome_cidade": "Taiacu",
+    "total_empresas": 1061,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sabino",
+    "nome_cidade": "Sabino",
+    "total_empresas": 1054,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "itaju",
+    "nome_cidade": "Itaju",
+    "total_empresas": 1049,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "areiopolis",
+    "nome_cidade": "Areiopolis",
+    "total_empresas": 1043,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "marapoama",
+    "nome_cidade": "Marapoama",
+    "total_empresas": 1039,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santa_cruz_da_conceicao",
+    "nome_cidade": "Santa Cruz Da Conceicao",
+    "total_empresas": 1028,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "mariapolis",
+    "nome_cidade": "Mariapolis",
+    "total_empresas": 1022,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "itirapua",
+    "nome_cidade": "Itirapua",
+    "total_empresas": 1020,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "silveiras",
+    "nome_cidade": "Silveiras",
+    "total_empresas": 1016,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "floreal",
+    "nome_cidade": "Floreal",
+    "total_empresas": 1013,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "rifaina",
+    "nome_cidade": "Rifaina",
+    "total_empresas": 1012,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "glicerio",
+    "nome_cidade": "Glicerio",
+    "total_empresas": 1004,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santa_maria_da_serra",
+    "nome_cidade": "Santa Maria Da Serra",
+    "total_empresas": 1003,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "populina",
+    "nome_cidade": "Populina",
+    "total_empresas": 995,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "suzanapolis",
+    "nome_cidade": "Suzanapolis",
+    "total_empresas": 994,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "taquarivai",
+    "nome_cidade": "Taquarivai",
+    "total_empresas": 993,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "redencao_da_serra",
+    "nome_cidade": "Redencao Da Serra",
+    "total_empresas": 986,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "barbosa",
+    "nome_cidade": "Barbosa",
+    "total_empresas": 978,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "alambari",
+    "nome_cidade": "Alambari",
+    "total_empresas": 975,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "palmares_paulista",
+    "nome_cidade": "Palmares Paulista",
+    "total_empresas": 971,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ribeirao_corrente",
+    "nome_cidade": "Ribeirao Corrente",
+    "total_empresas": 966,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "rubineia",
+    "nome_cidade": "Rubineia",
+    "total_empresas": 965,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "quadra",
+    "nome_cidade": "Quadra",
+    "total_empresas": 961,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ocaucu",
+    "nome_cidade": "Ocaucu",
+    "total_empresas": 951,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pontalinda",
+    "nome_cidade": "Pontalinda",
+    "total_empresas": 950,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "nipoa",
+    "nome_cidade": "Nipoa",
+    "total_empresas": 946,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sebastianopolis_do_sul",
+    "nome_cidade": "Sebastianopolis Do Sul",
+    "total_empresas": 938,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "espirito_santo_do_turvo",
+    "nome_cidade": "Espirito Santo Do Turvo",
+    "total_empresas": 936,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "guaimbe",
+    "nome_cidade": "Guaimbe",
+    "total_empresas": 932,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "paranapua",
+    "nome_cidade": "Paranapua",
+    "total_empresas": 932,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sandovalina",
+    "nome_cidade": "Sandovalina",
+    "total_empresas": 929,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "coronel_macedo",
+    "nome_cidade": "Coronel Macedo",
+    "total_empresas": 925,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "aguas_de_sao_pedro",
+    "nome_cidade": "Aguas De Sao Pedro",
+    "total_empresas": 923,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "dobrada",
+    "nome_cidade": "Dobrada",
+    "total_empresas": 922,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "oscar_bressane",
+    "nome_cidade": "Oscar Bressane",
+    "total_empresas": 920,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pedrinhas_paulista",
+    "nome_cidade": "Pedrinhas Paulista",
+    "total_empresas": 919,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "onda_verde",
+    "nome_cidade": "Onda Verde",
+    "total_empresas": 917,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "nova_canaa_paulista",
+    "nome_cidade": "Nova Canaa Paulista",
+    "total_empresas": 916,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "gastao_vidigal",
+    "nome_cidade": "Gastao Vidigal",
+    "total_empresas": 912,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santa_rita_d_oeste",
+    "nome_cidade": "Santa Rita D Oeste",
+    "total_empresas": 912,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "caiabu",
+    "nome_cidade": "Caiabu",
+    "total_empresas": 902,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "cassia_dos_coqueiros",
+    "nome_cidade": "Cassia Dos Coqueiros",
+    "total_empresas": 888,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "platina",
+    "nome_cidade": "Platina",
+    "total_empresas": 883,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "aramina",
+    "nome_cidade": "Aramina",
+    "total_empresas": 877,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "narandiba",
+    "nome_cidade": "Narandiba",
+    "total_empresas": 873,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "zacarias",
+    "nome_cidade": "Zacarias",
+    "total_empresas": 870,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "cabralia_paulista",
+    "nome_cidade": "Cabralia Paulista",
+    "total_empresas": 866,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "analandia",
+    "nome_cidade": "Analandia",
+    "total_empresas": 863,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "magda",
+    "nome_cidade": "Magda",
+    "total_empresas": 857,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "lutecia",
+    "nome_cidade": "Lutecia",
+    "total_empresas": 854,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "presidente_alves",
+    "nome_cidade": "Presidente Alves",
+    "total_empresas": 848,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pongai",
+    "nome_cidade": "Pongai",
+    "total_empresas": 845,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "boraceia",
+    "nome_cidade": "Boraceia",
+    "total_empresas": 845,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pratania",
+    "nome_cidade": "Pratania",
+    "total_empresas": 844,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "itapura",
+    "nome_cidade": "Itapura",
+    "total_empresas": 842,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sao_francisco",
+    "nome_cidade": "Sao Francisco",
+    "total_empresas": 838,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sao_jose_do_barreiro",
+    "nome_cidade": "Sao Jose Do Barreiro",
+    "total_empresas": 828,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "luiziania",
+    "nome_cidade": "Luiziania",
+    "total_empresas": 827,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "itaoca",
+    "nome_cidade": "Itaoca",
+    "total_empresas": 822,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "catigua",
+    "nome_cidade": "Catigua",
+    "total_empresas": 819,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "arco_iris",
+    "nome_cidade": "Arco Iris",
+    "total_empresas": 817,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "turmalina",
+    "nome_cidade": "Turmalina",
+    "total_empresas": 816,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "tejupa",
+    "nome_cidade": "Tejupa",
+    "total_empresas": 811,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "oleo",
+    "nome_cidade": "Oleo",
+    "total_empresas": 810,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "mombuca",
+    "nome_cidade": "Mombuca",
+    "total_empresas": 810,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "turiuba",
+    "nome_cidade": "Turiuba",
+    "total_empresas": 805,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "gabriel_monteiro",
+    "nome_cidade": "Gabriel Monteiro",
+    "total_empresas": 796,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "motuca",
+    "nome_cidade": "Motuca",
+    "total_empresas": 794,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "florinea",
+    "nome_cidade": "Florinea",
+    "total_empresas": 792,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ubarana",
+    "nome_cidade": "Ubarana",
+    "total_empresas": 788,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "joao_ramalho",
+    "nome_cidade": "Joao Ramalho",
+    "total_empresas": 783,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "adolfo",
+    "nome_cidade": "Adolfo",
+    "total_empresas": 774,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "parisi",
+    "nome_cidade": "Parisi",
+    "total_empresas": 759,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santa_clara_d_oeste",
+    "nome_cidade": "Santa Clara D Oeste",
+    "total_empresas": 750,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "canitar",
+    "nome_cidade": "Canitar",
+    "total_empresas": 748,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "novais",
+    "nome_cidade": "Novais",
+    "total_empresas": 744,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "emilianopolis",
+    "nome_cidade": "Emilianopolis",
+    "total_empresas": 739,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "barao_de_antonina",
+    "nome_cidade": "Barao De Antonina",
+    "total_empresas": 738,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santa_lucia",
+    "nome_cidade": "Santa Lucia",
+    "total_empresas": 734,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "cruzalia",
+    "nome_cidade": "Cruzalia",
+    "total_empresas": 733,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "moncoes",
+    "nome_cidade": "Moncoes",
+    "total_empresas": 712,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santa_ernestina",
+    "nome_cidade": "Santa Ernestina",
+    "total_empresas": 706,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "candido_rodrigues",
+    "nome_cidade": "Candido Rodrigues",
+    "total_empresas": 704,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "jeriquara",
+    "nome_cidade": "Jeriquara",
+    "total_empresas": 704,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "iporanga",
+    "nome_cidade": "Iporanga",
+    "total_empresas": 696,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "inubia_paulista",
+    "nome_cidade": "Inubia Paulista",
+    "total_empresas": 693,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santopolis_do_aguapei",
+    "nome_cidade": "Santopolis Do Aguapei",
+    "total_empresas": 688,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santa_salete",
+    "nome_cidade": "Santa Salete",
+    "total_empresas": 688,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "nova_independencia",
+    "nome_cidade": "Nova Independencia",
+    "total_empresas": 686,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santana_da_ponte_pensa",
+    "nome_cidade": "Santana Da Ponte Pensa",
+    "total_empresas": 682,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "lavrinhas",
+    "nome_cidade": "Lavrinhas",
+    "total_empresas": 681,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ribeira",
+    "nome_cidade": "Ribeira",
+    "total_empresas": 670,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "gaviao_peixoto",
+    "nome_cidade": "Gaviao Peixoto",
+    "total_empresas": 663,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "aspasia",
+    "nome_cidade": "Aspasia",
+    "total_empresas": 656,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "torre_de_pedra",
+    "nome_cidade": "Torre De Pedra",
+    "total_empresas": 643,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "salmourao",
+    "nome_cidade": "Salmourao",
+    "total_empresas": 637,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "estrela_do_norte",
+    "nome_cidade": "Estrela Do Norte",
+    "total_empresas": 633,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "timburi",
+    "nome_cidade": "Timburi",
+    "total_empresas": 632,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "lupercio",
+    "nome_cidade": "Lupercio",
+    "total_empresas": 626,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "jumirim",
+    "nome_cidade": "Jumirim",
+    "total_empresas": 621,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "nova_luzitania",
+    "nome_cidade": "Nova Luzitania",
+    "total_empresas": 612,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "mesopolis",
+    "nome_cidade": "Mesopolis",
+    "total_empresas": 604,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sarutaia",
+    "nome_cidade": "Sarutaia",
+    "total_empresas": 598,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "rubiacea",
+    "nome_cidade": "Rubiacea",
+    "total_empresas": 591,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "ribeirao_dos_indios",
+    "nome_cidade": "Ribeirao Dos Indios",
+    "total_empresas": 588,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sao_joao_do_pau_d_alho",
+    "nome_cidade": "Sao Joao Do Pau D Alho",
+    "total_empresas": 580,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sao_joao_das_duas_pontes",
+    "nome_cidade": "Sao Joao Das Duas Pontes",
+    "total_empresas": 578,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "canas",
+    "nome_cidade": "Canas",
+    "total_empresas": 578,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "fernao",
+    "nome_cidade": "Fernao",
+    "total_empresas": 577,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "lourdes",
+    "nome_cidade": "Lourdes",
+    "total_empresas": 576,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "julio_mesquita",
+    "nome_cidade": "Julio Mesquita",
+    "total_empresas": 575,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sagres",
+    "nome_cidade": "Sagres",
+    "total_empresas": 573,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "areias",
+    "nome_cidade": "Areias",
+    "total_empresas": 568,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "guarani_d_oeste",
+    "nome_cidade": "Guarani D Oeste",
+    "total_empresas": 563,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santa_mercedes",
+    "nome_cidade": "Santa Mercedes",
+    "total_empresas": 563,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "marinopolis",
+    "nome_cidade": "Marinopolis",
+    "total_empresas": 559,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pontes_gestal",
+    "nome_cidade": "Pontes Gestal",
+    "total_empresas": 558,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santo_expedito",
+    "nome_cidade": "Santo Expedito",
+    "total_empresas": 555,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "altair",
+    "nome_cidade": "Altair",
+    "total_empresas": 543,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "brejo_alegre",
+    "nome_cidade": "Brejo Alegre",
+    "total_empresas": 542,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "bom_sucesso_de_itarare",
+    "nome_cidade": "Bom Sucesso De Itarare",
+    "total_empresas": 542,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "nantes",
+    "nome_cidade": "Nantes",
+    "total_empresas": 533,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "dolcinopolis",
+    "nome_cidade": "Dolcinopolis",
+    "total_empresas": 522,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "nova_castilho",
+    "nome_cidade": "Nova Castilho",
+    "total_empresas": 513,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "embauba",
+    "nome_cidade": "Embauba",
+    "total_empresas": 497,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "dirce_reis",
+    "nome_cidade": "Dirce Reis",
+    "total_empresas": 480,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "borebi",
+    "nome_cidade": "Borebi",
+    "total_empresas": 478,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "alvinlandia",
+    "nome_cidade": "Alvinlandia",
+    "total_empresas": 475,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "sao_joao_de_iracema",
+    "nome_cidade": "Sao Joao De Iracema",
+    "total_empresas": 471,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "uniao_paulista",
+    "nome_cidade": "Uniao Paulista",
+    "total_empresas": 466,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "paulistania",
+    "nome_cidade": "Paulistania",
+    "total_empresas": 464,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "lucianopolis",
+    "nome_cidade": "Lucianopolis",
+    "total_empresas": 461,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "uru",
+    "nome_cidade": "Uru",
+    "total_empresas": 429,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "queiroz",
+    "nome_cidade": "Queiroz",
+    "total_empresas": 425,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "elisiario",
+    "nome_cidade": "Elisiario",
+    "total_empresas": 420,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "nova_guataporanga",
+    "nome_cidade": "Nova Guataporanga",
+    "total_empresas": 420,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "santa_cruz_da_esperanca",
+    "nome_cidade": "Santa Cruz Da Esperanca",
+    "total_empresas": 418,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "flora_rica",
+    "nome_cidade": "Flora Rica",
+    "total_empresas": 416,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "vitoria_brasil",
+    "nome_cidade": "Vitoria Brasil",
+    "total_empresas": 413,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "alvaro_de_carvalho",
+    "nome_cidade": "Alvaro De Carvalho",
+    "total_empresas": 412,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "bento_de_abreu",
+    "nome_cidade": "Bento De Abreu",
+    "total_empresas": 398,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "arapei",
+    "nome_cidade": "Arapei",
+    "total_empresas": 352,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "taquaral",
+    "nome_cidade": "Taquaral",
+    "total_empresas": 348,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "pracinha",
+    "nome_cidade": "Pracinha",
+    "total_empresas": 295,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "balbinos",
+    "nome_cidade": "Balbinos",
+    "total_empresas": 290,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "trabiju",
+    "nome_cidade": "Trabiju",
+    "total_empresas": 265,
+    "total_arquivos": 1
+  },
+  {
+    "pasta_cidade": "bora",
+    "nome_cidade": "Bora",
+    "total_empresas": 244,
+    "total_arquivos": 1
+  }
+]
