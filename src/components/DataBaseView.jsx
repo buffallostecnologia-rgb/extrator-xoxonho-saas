@@ -132,7 +132,7 @@ Posso fornecer o diagnóstico de forma gratuita.`;
     { cnpj: '39.812.554/0001-33', razao_social: 'CAMPINAS LOGISTICA SA', nome_fantasia: 'CAMP LOG', proprietario: 'Fernando Henrique Silva', cidade: 'Campinas', bairro: 'Distrito Industrial', telefone: '(19) 3788-0000', whatsapp: '(19) 99123-8899', site: 'www.camplog.com.br', email: 'operacional@camplog.com.br', cnae: '4930202', segmento: 'Transporte rodoviário de carga', porte: 'Demais', capital_social: 500000 }
   ];
 
-  const totalPages = Math.ceil((dbTotal || 1) / ITEMS_PER_PAGE);
+  const totalPages = Math.ceil((dbTotal || 1) / itemsPerPage);
 
   // Gera Link Dinâmico de WhatsApp com a Mensagem Persuasiva Curiosa
   const getCustomWaLink = (item) => {
