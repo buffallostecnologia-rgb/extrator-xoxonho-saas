@@ -59,7 +59,7 @@ export default function Sidebar({ activeTab, setActiveTab, user, onLogout, onGoT
   };
 
   return (
-    <aside className="w-64 bg-slate-900/95 border-r border-slate-800 flex flex-col justify-between shrink-0 h-screen sticky top-0 backdrop-blur-xl z-30">
+    <aside className="w-64 bg-slate-900/95 border-r border-slate-800 hidden md:flex flex-col justify-between shrink-0 h-screen sticky top-0 backdrop-blur-xl z-30">
       <div>
         {/* Brand Header com Logo do Mascote Xoxonho */}
         <div className="p-5 border-b border-slate-800/80 flex items-center gap-3">

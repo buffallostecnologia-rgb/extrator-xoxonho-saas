@@ -8,6 +8,7 @@ import MinhasListasView from './components/MinhasListasView';
 import InteligenciaView from './components/InteligenciaView';
 import CheckoutModal from './components/CheckoutModal';
 import ObrigadoView from './components/ObrigadoView';
+import BottomMobileNav from './components/BottomMobileNav';
 
 export default function App() {
   // Controle de Rota / View Baseado em URL (Path / Hash)
@@ -158,6 +159,11 @@ export default function App() {
           <InteligenciaView />
         )}
       </main>
+
+      {/* Menu Mobile Bottom (PWA) */}
+      {user && (
+        <BottomMobileNav activeTab={activeTab} setActiveTab={setActiveTab} />
+      )}
 
       <CheckoutModal 
         isOpen={isCheckoutOpen} 
