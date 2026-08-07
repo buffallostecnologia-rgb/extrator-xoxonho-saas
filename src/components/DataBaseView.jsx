@@ -75,11 +75,10 @@ Posso fornecer o diagnóstico de forma gratuita.`;
       .then(res => res.json())
       .then(resData => {
         if (!isMounted) return;
-        if (resData.data && resData.data.length > 0) {
+        if (typeof resData.total !== 'undefined' && Array.isArray(resData.data)) {
           setDbData(resData.data);
-          setDbTotal(resData.total || resData.data.length);
+          setDbTotal(resData.total);
         } else {
-          // Busca dataset estático do CDN se o servidor retornar vazio
           fetchStaticDataset(isMounted);
         }
       })
@@ -397,32 +396,43 @@ Posso fornecer o diagnóstico de forma gratuita.`;
             <tbody className="divide-y divide-slate-800/60 text-slate-200">
               {dbData.length > 0 ? (
                 dbData.map((item, idx) => {
+                  const cleanVal = (v) => {
+                    if (!v) return '';
+                    const s = String(v).trim();
+                    if (!s || s.toLowerCase() === 'nan' || s.toLowerCase() === 'null' || s.toLowerCase() === 'none') return '';
+                    return s;
+                  };
+
+                  const cleanRazao = cleanVal(item.razao_social) || cleanVal(item.nome_fantasia) || 'Empresa em SP';
+                  const cleanProp = cleanVal(item.proprietario) || 'Sócio Responsável';
+                  const cleanSite = cleanVal(item.site);
                   const waLink = getCustomWaLink(item);
+
                   return (
                     <tr key={item.cnpj || idx} className="hover:bg-slate-800/40 transition-colors group">
                       
                       <td className="py-3.5 px-4">
                         <div className="font-mono text-[11px] text-slate-400">{item.cnpj}</div>
-                        <div className="font-extrabold text-slate-100 text-xs mt-0.5 group-hover:text-blue-400 transition-colors">
-                          {item.nome_fantasia || item.razao_social}
+                        <div className="font-extrabold text-slate-100 text-xs mt-0.5 group-hover:text-blue-400 transition-colors truncate max-w-[200px]" title={cleanRazao}>
+                          {cleanRazao}
                         </div>
                       </td>
 
                       <td className="py-3.5 px-4">
                         <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-300 font-semibold text-xs">
                           <UserCheck className="w-3.5 h-3.5 text-purple-400 shrink-0" />
-                          <span>{item.proprietario || 'Sócio Responsável'}</span>
+                          <span>{cleanProp}</span>
                         </div>
                       </td>
 
                       <td className="py-3.5 px-4">
                         <div className="font-bold text-slate-200">{item.cidade}</div>
-                        <div className="text-[10px] text-slate-400">{item.bairro || 'Centro'}</div>
+                        <div className="text-[10px] text-slate-400">{cleanVal(item.bairro) || 'Centro'}</div>
                       </td>
 
                       <td className="py-3.5 px-4 max-w-[200px]">
-                        <div className="font-medium text-slate-300 truncate" title={item.segmento}>
-                          {item.segmento || 'Atividade Comercial'}
+                        <div className="font-medium text-slate-300 truncate" title={cleanVal(item.segmento)}>
+                          {cleanVal(item.segmento) || 'Atividade Comercial'}
                         </div>
                         <div className="text-[10px] text-slate-400 font-mono">CNAE: {item.cnae}</div>
                       </td>
@@ -445,15 +455,15 @@ Posso fornecer o diagnóstico de forma gratuita.`;
                       </td>
 
                       <td className="py-3.5 px-4">
-                        {item.site ? (
+                        {cleanSite ? (
                           <a
-                            href={item.site.startsWith('http') ? item.site : `https://${item.site}`}
+                            href={cleanSite.startsWith('http') ? cleanSite : `https://${cleanSite}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300 font-medium text-xs truncate max-w-[150px]"
                           >
                             <Globe className="w-3.5 h-3.5 shrink-0" />
-                            <span className="truncate">{item.site}</span>
+                            <span className="truncate">{cleanSite}</span>
                           </a>
                         ) : (
                           <span className="text-[11px] text-slate-500 italic">Sem site</span>
