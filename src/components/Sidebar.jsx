@@ -219,6 +219,14 @@ export default function Sidebar({ activeTab, setActiveTab, user, onLogout, onGoT
       {/* User Info & Footer */}
       <div className="p-4 border-t border-slate-800/80 space-y-2">
         <button
+          onClick={() => setActiveTab('configuracoes')}
+          className="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-lg text-xs font-bold text-indigo-400 hover:text-indigo-300 hover:bg-indigo-500/10 transition-all border border-indigo-500/20 shadow-sm shadow-indigo-500/10"
+        >
+          <KeyRound className="w-3.5 h-3.5" />
+          <span>Configurar CHAVE API (IA)</span>
+        </button>
+
+        <button
           onClick={onGoToLanding}
           className="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-lg text-xs font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 transition-all border border-slate-800"
         >
