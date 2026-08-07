@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
+import CommercialMap from './CommercialMap';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
@@ -30,7 +31,7 @@ export default function DashboardView({ onSelectFilter }) {
 
   // Variáveis Dinâmicas da API do Banco de Dados
   const valTotal = dbStats?.total !== undefined ? Number(dbStats.total).toLocaleString('pt-BR') : '7.474.256';
-  const valWhatsapp = dbStats?.comWhatsapp !== undefined ? Number(dbStats.comWhatsapp).toLocaleString('pt-BR') : '7.474.256';
+  const valWhatsapp = dbStats?.comWhatsapp !== undefined ? Number(dbStats.comWhatsapp).toLocaleString('pt-BR') : '2.892.296';
   const valSite = dbStats?.comSite !== undefined ? Number(dbStats.comSite).toLocaleString('pt-BR') : '2.358.194';
   const valMei = dbStats?.meiMe !== undefined ? Number(dbStats.meiMe).toLocaleString('pt-BR') : '5.420.000';
 
@@ -173,6 +174,9 @@ export default function DashboardView({ onSelectFilter }) {
           </div>
         </div>
       </div>
+
+      {/* Mapas Comerciais (Novo Módulo B2B) */}
+      <CommercialMap />
     </div>
   );
 }
