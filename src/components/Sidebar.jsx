@@ -1,19 +1,129 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { UserButton, useUser, useClerk } from '@clerk/clerk-react';
-import { LayoutDashboard, Database, FolderHeart, BrainCircuit, LogOut, UserCheck, Sparkles, Home, Settings } from 'lucide-react';
+import { LayoutDashboard, Database, FolderHeart, BrainCircuit, LogOut, UserCheck, Sparkles, Home, Settings, KeyRound, Save, CheckCircle2, ExternalLink } from 'lucide-react';
+
+// Página customizada para injetar dentro do modal da Clerk
+function AISettingsPage() {
+  const [aiEnabled, setAiEnabled] = useState(false);
+  const [apiKey, setApiKey] = useState('');
+  const [saved, setSaved] = useState(false);
+
+  useEffect(() => {
+    const savedConfig = localStorage.getItem('xoxonho_ai_config');
+    if (savedConfig) {
+      try {
+        const parsed = JSON.parse(savedConfig);
+        setAiEnabled(parsed.enabled || false);
+        setApiKey(parsed.apiKey || '');
+      } catch (e) {}
+    }
+  }, []);
+
+  const handleSave = () => {
+    localStorage.setItem('xoxonho_ai_config', JSON.stringify({ enabled: aiEnabled, apiKey }));
+    setSaved(true);
+    setTimeout(() => setSaved(false), 3000);
+  };
+
+  return (
+    <div className="p-6">
+      <div className="mb-6">
+        <h2 className="text-xl font-bold text-slate-800 mb-2">Inteligência Artificial (Google Gemini)</h2>
+        <p className="text-sm text-slate-500">Conecte sua própria chave de API para habilitar os robôs inteligentes dentro do seu painel B2B.</p>
+      </div>
+
+      <div className="space-y-6">
+        <div className="flex items-center justify-between">
+          <label className="text-sm font-semibold text-slate-700">Ativar Robô de IA</label>
+          <button 
+            onClick={() => setAiEnabled(!aiEnabled)}
+            className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${aiEnabled ? 'bg-indigo-600' : 'bg-slate-300'}`}
+          >
+            <span className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out ${aiEnabled ? 'translate-x-5' : 'translate-x-0'}`} />
+          </button>
+        </div>
+
+        {aiEnabled && (
+          <div className="space-y-4 animate-fadeIn">
+            <div>
+              <label className="block text-sm font-semibold text-slate-700 mb-2 flex items-center gap-2">
+                <KeyRound className="w-4 h-4 text-slate-500" />
+                Sua API Key do Google
+              </label>
+              <div className="flex flex-col gap-3">
+                <input 
+                  type="password"
+                  value={apiKey}
+                  onChange={(e) => setApiKey(e.target.value)}
+                  placeholder="AIzaSy..."
+                  className="w-full bg-white border border-slate-300 rounded-lg px-4 py-2.5 text-slate-800 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-sm font-mono"
+                />
+                <button 
+                  onClick={handleSave}
+                  className="w-full py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-bold flex items-center justify-center gap-2 transition-all shadow-md shadow-indigo-600/20"
+                >
+                  {saved ? <CheckCircle2 className="w-4 h-4" /> : <Save className="w-4 h-4" />}
+                  <span>{saved ? 'Chave Salva Localmente!' : 'Salvar Chave'}</span>
+                </button>
+              </div>
+            </div>
+
+            <div className="p-4 rounded-lg bg-slate-50 border border-slate-200">
+              <h4 className="text-xs font-bold text-slate-700 mb-2">Como gerar sua chave gratuitamente:</h4>
+              <ol className="text-xs text-slate-500 space-y-1.5 list-decimal list-inside mb-4">
+                <li>Acesse o <strong>Google AI Studio</strong>.</li>
+                <li>Faça login com sua conta do Google.</li>
+                <li>Clique em <strong>"Create API key"</strong>.</li>
+                <li>Copie o código gerado e cole acima.</li>
+              </ol>
+              <a 
+                href="https://aistudio.google.com/app/apikey"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-indigo-600 hover:text-indigo-700 font-semibold text-xs"
+              >
+                Abrir Google AI Studio
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
 
 function SafeClerkUser() {
   try {
     const { user: clerkUser, isSignedIn } = useUser() || {};
+    const clerk = useClerk();
+
     if (isSignedIn && clerkUser) {
       return (
         <div className="flex items-center gap-3 w-full">
-          <UserButton afterSignOutUrl="/" />
-          <div className="flex-1 min-w-0">
-            <p className="text-xs font-semibold text-slate-200 truncate">
+          {/* Avatar com o UserProfile customizado */}
+          <UserButton afterSignOutUrl="/">
+            <UserButton.UserProfilePage
+              label="Configurar IA"
+              url="ai-settings"
+              labelIcon={<BrainCircuit className="w-4 h-4" />}
+            >
+              <AISettingsPage />
+            </UserButton.UserProfilePage>
+          </UserButton>
+          
+          {/* Textos da Conta transformados em botão clicável */}
+          <div 
+            onClick={() => clerk.openUserProfile()}
+            className="flex-1 min-w-0 cursor-pointer group"
+            title="Abrir Configurações da Conta"
+          >
+            <p className="text-xs font-semibold text-slate-200 truncate group-hover:text-indigo-400 transition-colors">
               {clerkUser.fullName || clerkUser.primaryEmailAddress?.emailAddress}
             </p>
-            <p className="text-[10px] text-emerald-400 font-medium">Assinante Pro R$59</p>
+            <p className="text-[10px] text-emerald-400 font-medium group-hover:text-emerald-300 transition-colors">
+              Assinante Pro R$59
+            </p>
           </div>
         </div>
       );
