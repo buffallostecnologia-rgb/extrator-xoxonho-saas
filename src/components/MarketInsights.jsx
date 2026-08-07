@@ -37,16 +37,16 @@ export default function MarketInsights() {
       {
         label: 'Desperdício Estimado (Leads perdidos por mês em R$)',
         data: [12000, 25000, 18000, 5000],
-        backgroundColor: 'rgba(239, 68, 68, 0.8)', // red-500
-        borderColor: 'rgba(239, 68, 68, 1)',
-        borderWidth: 1,
+        backgroundColor: '#ef4444', // red-500
+        borderRadius: 6,
+        barPercentage: 0.6,
       },
       {
         label: 'Custo da Solução (Seu Site/Automação em R$)',
         data: [2500, 3500, 4000, 1200],
-        backgroundColor: 'rgba(16, 185, 129, 0.8)', // emerald-500
-        borderColor: 'rgba(16, 185, 129, 1)',
-        borderWidth: 1,
+        backgroundColor: '#10b981', // emerald-500
+        borderRadius: 6,
+        barPercentage: 0.6,
       }
     ]
   };
@@ -55,12 +55,31 @@ export default function MarketInsights() {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
-      legend: { labels: { color: '#cbd5e1' }, position: 'bottom' },
-      tooltip: { mode: 'index', intersect: false }
+      legend: { 
+        labels: { color: '#94a3b8', font: { family: 'Inter, sans-serif', weight: '500' }, usePointStyle: true }, 
+        position: 'top',
+        align: 'end'
+      },
+      tooltip: { 
+        mode: 'index', 
+        intersect: false,
+        backgroundColor: 'rgba(15, 23, 42, 0.9)',
+        titleColor: '#f1f5f9',
+        bodyColor: '#cbd5e1',
+        borderColor: 'rgba(51, 65, 85, 0.5)',
+        borderWidth: 1,
+        padding: 12
+      }
     },
     scales: {
-      x: { ticks: { color: '#94a3b8' }, grid: { display: false } },
-      y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(30, 41, 59, 0.5)' } }
+      x: { ticks: { color: '#64748b', font: { weight: '500' } }, grid: { display: false } },
+      y: { 
+        ticks: { 
+          color: '#64748b',
+          callback: (value) => 'R$ ' + (value / 1000) + 'k'
+        }, 
+        grid: { color: 'rgba(30, 41, 59, 0.4)', drawBorder: false } 
+      }
     }
   };
 
@@ -138,21 +157,21 @@ export default function MarketInsights() {
         </div>
       </div>
 
+      {/* Gráfico 1: Oportunidade Financeira (Gargalo) - Agora em Full Width */}
+      <div className="glass-card rounded-2xl p-6 border border-slate-800">
+        <h3 className="text-base font-semibold text-slate-100 mb-2 flex items-center gap-2">
+          <TrendingUp className="w-5 h-5 text-emerald-400" /> Comparativo B2B: Desperdício de Leads vs Custo da Solução
+        </h3>
+        <p className="text-xs text-slate-400 mb-8 max-w-3xl">
+          O argumento de venda definitivo: Mostrar ao cliente corporativo que o orçamento mensal queimado no Google/Meta Ads por falhas operacionais e falta de automação é <strong>substancialmente maior</strong> que o investimento na sua solução digital (Automação + CRM + Site).
+        </p>
+        <div className="h-80 w-full">
+          <Bar data={roiData} options={roiOptions} />
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
         
-        {/* Gráfico 1: Oportunidade Financeira (Gargalo) */}
-        <div className="glass-card rounded-2xl p-6 border border-slate-800">
-          <h3 className="text-sm font-semibold text-slate-200 mb-2 flex items-center gap-2">
-            <TrendingUp className="w-4 h-4 text-emerald-400" /> Comparativo B2B: Desperdício de Leads vs Solução
-          </h3>
-          <p className="text-xs text-slate-400 mb-6">
-            O argumento de venda principal: Mostrar ao cliente que o dinheiro que ele queima no Google/Meta Ads por mês por não ter uma automação/CRM rápido é 3x maior que o custo de te contratar.
-          </p>
-          <div className="h-72">
-            <Bar data={roiData} options={roiOptions} />
-          </div>
-        </div>
-
         {/* Gráfico 2: Oceanos Azuis */}
         <div className="glass-card rounded-2xl p-6 border border-slate-800">
           <h3 className="text-sm font-semibold text-slate-200 mb-2 flex items-center gap-2">
