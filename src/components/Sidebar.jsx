@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { UserButton, useUser, useClerk } from '@clerk/clerk-react';
-import { LayoutDashboard, Database, FolderHeart, BrainCircuit, LogOut, UserCheck, Sparkles, Home, Settings, KeyRound, Save, CheckCircle2, ExternalLink } from 'lucide-react';
+import { LayoutDashboard, Database, FolderHeart, BrainCircuit, LogOut, UserCheck, Sparkles, Home, Settings, KeyRound, Save, CheckCircle2, ExternalLink, Bot } from 'lucide-react';
 
 // Página customizada para injetar dentro do modal da Clerk
 function AISettingsPage() {
@@ -157,6 +157,12 @@ export default function Sidebar({ activeTab, setActiveTab, user, onLogout, onGoT
       label: 'Inteligência',
       icon: BrainCircuit,
       desc: 'Panorama & Dados SP'
+    },
+    {
+      id: 'consultor',
+      label: 'Consultor',
+      icon: Bot,
+      desc: 'Chat de Vendas com IA'
     },
     {
       id: 'configuracoes',

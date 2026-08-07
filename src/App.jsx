@@ -8,6 +8,7 @@ import MinhasListasView from './components/MinhasListasView';
 import InteligenciaView from './components/InteligenciaView';
 import CRMKanbanView from './components/CRMKanbanView';
 import ConfiguracoesView from './components/ConfiguracoesView';
+import ConsultorView from './components/ConsultorView';
 import CheckoutModal from './components/CheckoutModal';
 import ObrigadoView from './components/ObrigadoView';
 import BottomMobileNav from './components/BottomMobileNav';
@@ -178,6 +179,10 @@ export default function App() {
 
         {activeTab === 'configuracoes' && (
           <ConfiguracoesView />
+        )}
+
+        {activeTab === 'consultor' && (
+          <ConsultorView savedLists={savedLists} setActiveTab={setActiveTab} />
         )}
       </main>
 
