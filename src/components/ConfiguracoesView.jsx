@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Settings, BrainCircuit, KeyRound, ExternalLink, Save, CheckCircle2 } from 'lucide-react';
+import { Settings, BrainCircuit, KeyRound, ExternalLink, Save, CheckCircle2, FlaskConical, Loader2, AlertCircle } from 'lucide-react';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 
 export default function ConfiguracoesView() {
   const [aiEnabled, setAiEnabled] = useState(false);
   const [apiKey, setApiKey] = useState('');
   const [saved, setSaved] = useState(false);
+  const [testStatus, setTestStatus] = useState('idle'); // idle, loading, success, error
+  const [testMessage, setTestMessage] = useState('');
 
   useEffect(() => {
     // Carregar configurações salvas no localStorage
@@ -27,6 +30,32 @@ export default function ConfiguracoesView() {
     }));
     setSaved(true);
     setTimeout(() => setSaved(false), 3000);
+  };
+
+  const handleTestKey = async () => {
+    if (!apiKey.trim()) {
+      setTestStatus('error');
+      setTestMessage('Insira uma chave antes de testar.');
+      return;
+    }
+    setTestStatus('loading');
+    try {
+      const cleanKey = apiKey.trim();
+      const genAI = new GoogleGenerativeAI(cleanKey);
+      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+      const result = await model.generateContent("Responda apenas 'OK'");
+      const txt = result.response.text();
+      if (txt) {
+        setTestStatus('success');
+        setTestMessage('API Validada com sucesso! O Consultor está pronto.');
+      } else {
+        throw new Error('Sem resposta');
+      }
+    } catch (e) {
+      console.error(e);
+      setTestStatus('error');
+      setTestMessage('Erro de Conexão: A Chave é inválida ou sem saldo/cota.');
+    }
   };
 
   return (
@@ -98,10 +127,20 @@ export default function ConfiguracoesView() {
                   <input 
                     type="password"
                     value={apiKey}
-                    onChange={(e) => setApiKey(e.target.value)}
+                    onChange={(e) => { setApiKey(e.target.value); setTestStatus('idle'); }}
                     placeholder="Cole sua chave AIzaSy..."
                     className="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-mono text-sm"
                   />
+                  
+                  <button 
+                    onClick={handleTestKey}
+                    disabled={testStatus === 'loading'}
+                    className="px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold flex items-center justify-center gap-2 transition-all shrink-0 border border-slate-700 disabled:opacity-50"
+                  >
+                    {testStatus === 'loading' ? <Loader2 className="w-4 h-4 animate-spin" /> : <FlaskConical className="w-4 h-4" />}
+                    <span>Testar</span>
+                  </button>
+
                   <button 
                     onClick={handleSave}
                     className="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold flex items-center justify-center gap-2 transition-all shrink-0 shadow-lg shadow-indigo-500/25"
@@ -110,6 +149,21 @@ export default function ConfiguracoesView() {
                     <span>{saved ? 'Salvo!' : 'Salvar Chave'}</span>
                   </button>
                 </div>
+
+                {/* Mensagens de Feedback de Teste */}
+                {testStatus === 'success' && (
+                  <div className="mt-3 p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
+                    <span className="text-xs font-semibold text-emerald-400">{testMessage}</span>
+                  </div>
+                )}
+                {testStatus === 'error' && (
+                  <div className="mt-3 p-3 rounded-lg bg-rose-500/10 border border-rose-500/30 flex items-start gap-2">
+                    <AlertCircle className="w-4 h-4 text-rose-400 mt-0.5 shrink-0" />
+                    <span className="text-xs font-semibold text-rose-400">{testMessage}</span>
+                  </div>
+                )}
+
                 <p className="text-[10px] text-slate-500 mt-2">
                   🔒 Sua chave fica salva apenas neste navegador e nunca é enviada para os nossos servidores.
                 </p>

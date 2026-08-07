@@ -71,7 +71,7 @@ Posso fornecer o diagnóstico de forma gratuita.`;
     params.append('page', currentPage.toString());
     params.append('limit', itemsPerPage.toString());
 
-    fetch(`/.netlify/functions/get-empresas?${params.toString()}`)
+    fetch(`https://buffallos.netlify.app/.netlify/functions/get-empresas?${params.toString()}`)
       .then(res => res.json())
       .then(resData => {
         if (!isMounted) return;

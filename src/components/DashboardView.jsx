@@ -19,7 +19,7 @@ export default function DashboardView({ onSelectFilter }) {
 
   // Busca Métricas Reais e Dinâmicas do Banco de Dados via API
   React.useEffect(() => {
-    fetch('/.netlify/functions/get-empresas?stats=true')
+    fetch('https://buffallos.netlify.app/.netlify/functions/get-empresas?stats=true')
       .then(res => res.ok ? res.json() : null)
       .then(data => {
         if (data && typeof data.total !== 'undefined') {

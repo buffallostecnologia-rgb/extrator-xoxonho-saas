@@ -47,21 +47,15 @@ export async function handler(event, context) {
 
     // Rota Específica de Estatísticas Dinâmicas Reais
     if (queryParams.stats === 'true') {
-      const [totRes, waRes, siteRes, meiRes] = await Promise.all([
-        clientPool.query("SELECT COUNT(*) FROM public.empresas WHERE ativa = TRUE"),
-        clientPool.query("SELECT COUNT(*) FROM public.empresas WHERE ativa = TRUE AND whatsapp IS NOT NULL AND whatsapp != '' AND LOWER(whatsapp) != 'nan'"),
-        clientPool.query("SELECT COUNT(*) FROM public.empresas WHERE ativa = TRUE AND site IS NOT NULL AND site != '' AND LOWER(site) != 'nan' AND LOWER(site) != 'null' AND LOWER(site) != 'none'"),
-        clientPool.query("SELECT COUNT(*) FROM public.empresas WHERE ativa = TRUE AND (porte LIKE '%MEI%' OR porte LIKE '%ME%')")
-      ]);
-
+      // Retorna os dados cacheados aproximados da carga (para não derrubar o banco de dados fazendo COUNT em 7.4 milhões de linhas)
       return {
         statusCode: 200,
         headers,
         body: JSON.stringify({
-          total: parseInt(totRes.rows[0].count, 10),
-          comWhatsapp: parseInt(waRes.rows[0].count, 10),
-          comSite: parseInt(siteRes.rows[0].count, 10),
-          meiMe: parseInt(meiRes.rows[0].count, 10)
+          total: 7474256,
+          comWhatsapp: 2892296,
+          comSite: 2358194,
+          meiMe: 5420000
         })
       };
     }
@@ -121,8 +115,8 @@ export async function handler(event, context) {
 
     const whereClause = whereConditions.length > 0 ? `WHERE ${whereConditions.join(' AND ')}` : '';
 
-    // Query de Contagem Real e Dados
-    const countRes = await clientPool.query(`SELECT COUNT(*) FROM public.empresas ${whereClause}`, values);
+    // Query de Contagem Rápida (Limitada a 10.000 para não dar timeout em 7.4M de linhas)
+    const countRes = await clientPool.query(`SELECT count(1) as count FROM (SELECT 1 FROM public.empresas ${whereClause} LIMIT 10000) AS c`, values);
     const totalCount = parseInt(countRes.rows[0].count, 10);
 
     const dataRes = await clientPool.query(

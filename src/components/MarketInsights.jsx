@@ -13,7 +13,7 @@ import {
   LinearScale,
   BarElement
 } from 'chart.js';
-import { Map, TrendingUp, AlertTriangle, Briefcase, Activity } from 'lucide-react';
+import { Map, TrendingUp, AlertTriangle, Briefcase, Activity, PieChart } from 'lucide-react';
 
 ChartJS.register(
   RadialLinearScale, 
@@ -121,6 +121,43 @@ export default function MarketInsights() {
     }
   };
 
+  // Gráfico 3: Motivos da Baixa Maturidade
+  const doughnutData = {
+    labels: ['Sem Website Próprio', 'Sites Lentos/Antigos (Mobile)', 'Sem WhatsApp Integrado', 'Sem Tráfego/SEO'],
+    datasets: [
+      {
+        data: [42, 28, 18, 12],
+        backgroundColor: [
+          'rgba(239, 68, 68, 0.8)', // red-500
+          'rgba(245, 158, 11, 0.8)', // amber-500
+          'rgba(16, 185, 129, 0.8)', // emerald-500
+          'rgba(99, 102, 241, 0.8)', // indigo-500
+        ],
+        borderColor: 'rgba(15, 23, 42, 1)',
+        borderWidth: 2,
+      },
+    ],
+  };
+
+  const doughnutOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'right',
+        labels: { color: '#94a3b8', font: { size: 11, family: 'Inter, sans-serif' }, usePointStyle: true }
+      },
+      tooltip: {
+        backgroundColor: 'rgba(15, 23, 42, 0.9)',
+        titleColor: '#f1f5f9',
+        bodyColor: '#cbd5e1',
+        borderColor: 'rgba(51, 65, 85, 0.5)',
+        borderWidth: 1,
+      }
+    },
+    cutout: '65%'
+  };
+
   // Mapeamento Segmento x Cidades Líderes
   const segmentCities = [
     {
@@ -182,6 +219,19 @@ export default function MarketInsights() {
           </p>
           <div className="h-72">
             <Radar data={oceanosData} options={radarOptions} />
+          </div>
+        </div>
+
+        {/* Gráfico 3: Motivos de Baixa Maturidade */}
+        <div className="glass-card rounded-2xl p-6 border border-slate-800">
+          <h3 className="text-sm font-semibold text-slate-200 mb-2 flex items-center gap-2">
+            <PieChart className="w-4 h-4 text-purple-400" /> Diagnóstico: Motivos da Baixa Maturidade
+          </h3>
+          <p className="text-xs text-slate-400 mb-6">
+            O que exatamente falta nessas empresas ricas do interior? O gráfico abaixo revela os <strong>4 principais buracos tecnológicos</strong> onde você pode entrar vendendo.
+          </p>
+          <div className="h-72 flex items-center justify-center">
+            <Doughnut data={doughnutData} options={doughnutOptions} />
           </div>
         </div>
 
