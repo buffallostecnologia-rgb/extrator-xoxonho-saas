@@ -1,5 +1,6 @@
 import React from 'react';
 import { Target, Lightbulb, Zap, TrendingUp, Search, PhoneCall, CheckCircle, Stethoscope, ShoppingCart, Building, Factory } from 'lucide-react';
+import MarketInsights from './MarketInsights';
 
 export default function CommercialMap() {
   const eliteSegments = [
@@ -183,6 +184,9 @@ export default function CommercialMap() {
           </div>
         </div>
       </div>
+
+      {/* Renderiza os gráficos avançados e oceanos azuis */}
+      <MarketInsights />
     </div>
   );
 }
