@@ -7,6 +7,7 @@ import DataBaseView from './components/DataBaseView';
 import MinhasListasView from './components/MinhasListasView';
 import InteligenciaView from './components/InteligenciaView';
 import CRMKanbanView from './components/CRMKanbanView';
+import ConfiguracoesView from './components/ConfiguracoesView';
 import CheckoutModal from './components/CheckoutModal';
 import ObrigadoView from './components/ObrigadoView';
 import BottomMobileNav from './components/BottomMobileNav';
@@ -173,6 +174,10 @@ export default function App() {
 
         {activeTab === 'inteligencia' && (
           <InteligenciaView />
+        )}
+
+        {activeTab === 'configuracoes' && (
+          <ConfiguracoesView />
         )}
       </main>
 

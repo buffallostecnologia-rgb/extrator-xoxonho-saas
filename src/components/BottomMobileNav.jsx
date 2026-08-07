@@ -1,12 +1,13 @@
 import React from 'react';
-import { LayoutDashboard, Database, FolderHeart, BrainCircuit } from 'lucide-react';
+import { LayoutDashboard, Database, FolderHeart, BrainCircuit, Settings } from 'lucide-react';
 
 export default function BottomMobileNav({ activeTab, setActiveTab }) {
   const menuItems = [
     { id: 'dashboard', label: 'Início', icon: LayoutDashboard },
     { id: 'database', label: 'Dados', icon: Database },
     { id: 'minhas_listas', label: 'Listas', icon: FolderHeart },
-    { id: 'inteligencia', label: 'BI', icon: BrainCircuit }
+    { id: 'inteligencia', label: 'BI', icon: BrainCircuit },
+    { id: 'configuracoes', label: 'Ajustes', icon: Settings }
   ];
 
   return (

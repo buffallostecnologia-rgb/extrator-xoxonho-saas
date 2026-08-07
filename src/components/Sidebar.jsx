@@ -1,6 +1,6 @@
 import React from 'react';
 import { UserButton, useUser, useClerk } from '@clerk/clerk-react';
-import { LayoutDashboard, Database, FolderHeart, BrainCircuit, LogOut, UserCheck, Sparkles, Home } from 'lucide-react';
+import { LayoutDashboard, Database, FolderHeart, BrainCircuit, LogOut, UserCheck, Sparkles, Home, Settings } from 'lucide-react';
 
 function SafeClerkUser() {
   try {
@@ -47,6 +47,12 @@ export default function Sidebar({ activeTab, setActiveTab, user, onLogout, onGoT
       label: 'Inteligência',
       icon: BrainCircuit,
       desc: 'Panorama & Dados SP'
+    },
+    {
+      id: 'configuracoes',
+      label: 'Configurações',
+      icon: Settings,
+      desc: 'Conta & Integrações de IA'
     }
   ];
 
