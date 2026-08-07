@@ -15,9 +15,8 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 export default function DashboardView({ onSelectFilter }) {
   const [dbStats, setDbStats] = React.useState(null);
-  const [loading, setLoading] = React.useState(true);
 
-  // Busca Métricas Reais e Dinâmicas do Banco de Dados na Nuvem (GET /get-empresas?stats=true)
+  // Busca Métricas Reais e Dinâmicas do Banco de Dados via API
   React.useEffect(() => {
     fetch('/.netlify/functions/get-empresas?stats=true')
       .then(res => res.ok ? res.json() : null)
@@ -26,11 +25,10 @@ export default function DashboardView({ onSelectFilter }) {
           setDbStats(data);
         }
       })
-      .catch(() => {})
-      .finally(() => setLoading(false));
+      .catch(() => {});
   }, []);
 
-  // Variáveis Dinâmicas Reais da Consulta GET no Banco de Dados
+  // Variáveis Dinâmicas da API do Banco de Dados
   const valTotal = dbStats?.total !== undefined ? Number(dbStats.total).toLocaleString('pt-BR') : '7.474.256';
   const valWhatsapp = dbStats?.comWhatsapp !== undefined ? Number(dbStats.comWhatsapp).toLocaleString('pt-BR') : '7.474.256';
   const valSite = dbStats?.comSite !== undefined ? Number(dbStats.comSite).toLocaleString('pt-BR') : '2.358.194';
@@ -41,10 +39,10 @@ export default function DashboardView({ onSelectFilter }) {
       id: 'todas',
       title: 'Empresas Ativas SP',
       value: valTotal,
-      badge: loading ? 'Carregando Banco...' : 'GET Dinâmico do Banco',
+      badge: 'Base Completa SP',
       color: 'from-blue-600 to-indigo-600',
       icon: Building2,
-      desc: 'Somatória total de empresas ativas no CockroachDB',
+      desc: 'Base oficial de empresas ativas no estado',
       filter: {}
     },
     {
@@ -54,17 +52,17 @@ export default function DashboardView({ onSelectFilter }) {
       badge: 'Prontos p/ Disparo',
       color: 'from-emerald-600 to-teal-600',
       icon: MessageSquare,
-      desc: 'Somatória total de empresas com número de WhatsApp',
+      desc: 'Validados no formato wa.me de 1 clique',
       filter: { comWhatsapp: true }
     },
     {
       id: 'site',
       title: 'Com Website / Domínio',
       value: valSite,
-      badge: 'Presença Digital Auditada',
+      badge: 'Presença Digital',
       color: 'from-cyan-600 to-blue-600',
       icon: Globe,
-      desc: 'Somatória total de empresas com Website / Domínio',
+      desc: 'Domínio corporativo oficial mapeado',
       filter: { comWebsite: true }
     },
     {
@@ -74,7 +72,7 @@ export default function DashboardView({ onSelectFilter }) {
       badge: 'Micro & Pequenas',
       color: 'from-purple-600 to-pink-600',
       icon: Store,
-      desc: 'Somatória total de empresas MEI / ME no banco',
+      desc: 'Micro e pequenas empresas ativas',
       filter: { categoria: 'MEI' }
     }
   ];
@@ -118,12 +116,12 @@ export default function DashboardView({ onSelectFilter }) {
             Visão Geral de Prospecção — <span className="gradient-text">Estado de São Paulo</span>
           </h1>
           <p className="mt-2 text-sm text-slate-400 leading-relaxed">
-            Indicadores dinâmicos calculados via consulta em tempo real no banco de dados. Clique em qualquer card para abrir os registros correspondentes no <strong className="text-slate-200">DataBase</strong>.
+            Indicadores comerciais em tempo real para direcionar a abordagem do seu time. Clique em qualquer card abaixo para abrir os registros filtrados no <strong className="text-slate-200">DataBase</strong>.
           </p>
         </div>
       </div>
 
-      {/* Cards de Métricas Dinâmicas (GET no Banco de Dados) */}
+      {/* Cards de Métricas Comerciais Dinâmicas */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {metrics.map((card) => {
           const Icon = card.icon;
