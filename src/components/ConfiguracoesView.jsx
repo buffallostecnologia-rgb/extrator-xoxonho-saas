@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Settings, BrainCircuit, KeyRound, ExternalLink, Save, CheckCircle2, FlaskConical, Loader2, AlertCircle } from 'lucide-react';
-import { GoogleGenerativeAI } from '@google/generative-ai';
 
 export default function ConfiguracoesView() {
   const [aiEnabled, setAiEnabled] = useState(false);
@@ -40,21 +39,24 @@ export default function ConfiguracoesView() {
     }
     setTestStatus('loading');
     try {
-      const cleanKey = apiKey.trim();
-      const genAI = new GoogleGenerativeAI(cleanKey);
-      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-      const result = await model.generateContent("Responda apenas 'OK'");
-      const txt = result.response.text();
-      if (txt) {
+      // Usa proxy Netlify para evitar bloqueio de CORS do navegador
+      const res = await fetch('https://buffallos.netlify.app/.netlify/functions/test-gemini', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ apiKey: apiKey.trim() })
+      });
+      const data = await res.json();
+      if (data.success) {
         setTestStatus('success');
-        setTestMessage('API Validada com sucesso! O Consultor está pronto.');
+        setTestMessage(data.message);
       } else {
-        throw new Error('Sem resposta');
+        setTestStatus('error');
+        setTestMessage(data.message || 'Erro desconhecido.');
       }
     } catch (e) {
       console.error(e);
       setTestStatus('error');
-      setTestMessage('Erro de Conexão: A Chave é inválida ou sem saldo/cota.');
+      setTestMessage('Erro de rede: Verifique sua conexão.');
     }
   };
 

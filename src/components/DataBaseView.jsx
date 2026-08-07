@@ -18,7 +18,10 @@ import {
   MapPin,
   UserCheck,
   Loader2,
-  RefreshCw
+  RefreshCw,
+  Phone,
+  CheckSquare,
+  Square
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
@@ -54,6 +57,40 @@ Posso fornecer o diagnóstico de forma gratuita.`;
   const [loading, setLoading] = useState(false);
   const [showSaveListModal, setShowSaveListModal] = useState(false);
   const [listNameInput, setListNameInput] = useState('');
+  
+  // Seleção de Empresas para Lista Personalizada
+  const [selectedItems, setSelectedItems] = useState(new Set());
+  
+  const toggleSelect = (cnpj) => {
+    setSelectedItems(prev => {
+      const next = new Set(prev);
+      if (next.has(cnpj)) next.delete(cnpj); else next.add(cnpj);
+      return next;
+    });
+  };
+  
+  const toggleSelectAll = () => {
+    if (selectedItems.size === dbData.length) {
+      setSelectedItems(new Set());
+    } else {
+      setSelectedItems(new Set(dbData.map(d => d.cnpj)));
+    }
+  };
+  
+  const saveSelectedList = () => {
+    const selected = dbData.filter(d => selectedItems.has(d.cnpj));
+    if (selected.length === 0) return;
+    onSaveList({
+      id: Date.now().toString(),
+      name: `Lista Selecionada - ${new Date().toLocaleDateString('pt-BR')}`,
+      date: new Date().toLocaleDateString('pt-BR'),
+      count: selected.length,
+      filters: { cidade, cnae, comWebsite, comWhatsapp, porte, bairro, minCapital },
+      items: selected
+    });
+    confetti({ particleCount: 80, spread: 60, origin: { y: 0.6 } });
+    setSelectedItems(new Set());
+  };
 
   // Busca dados dinâmicos do CockroachDB via Serverless Function
   useEffect(() => {
@@ -339,6 +376,28 @@ Posso fornecer o diagnóstico de forma gratuita.`;
         </div>
 
         <div className="flex flex-wrap items-center gap-3">
+          {/* Badge de Selecionados */}
+          {selectedItems.size > 0 && (
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-bold text-indigo-300 bg-indigo-500/20 border border-indigo-500/30 px-3 py-1.5 rounded-xl">
+                {selectedItems.size} selecionada{selectedItems.size > 1 ? 's' : ''}
+              </span>
+              <button
+                onClick={saveSelectedList}
+                className="py-2 px-4 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white text-xs font-bold flex items-center gap-1.5 transition-all shadow-md"
+              >
+                <CheckSquare className="w-4 h-4" />
+                <span>Salvar Selecionadas</span>
+              </button>
+              <button
+                onClick={() => setSelectedItems(new Set())}
+                className="py-2 px-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 text-xs transition-all"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          )}
+
           {/* Seletor de Tamanho de Página */}
           <div className="flex items-center gap-1.5 text-xs text-slate-400">
             <span>Mostrar por página:</span>
@@ -383,10 +442,18 @@ Posso fornecer o diagnóstico de forma gratuita.`;
           <table className="w-full text-left text-xs">
             <thead className="bg-slate-900/90 text-slate-400 uppercase tracking-wider text-[10px] font-bold border-b border-slate-800">
               <tr>
+                <th className="py-3.5 px-3 w-10">
+                  <button onClick={toggleSelectAll} className="text-slate-400 hover:text-indigo-400 transition-colors">
+                    {selectedItems.size === dbData.length && dbData.length > 0
+                      ? <CheckSquare className="w-4 h-4 text-indigo-400" />
+                      : <Square className="w-4 h-4" />}
+                  </button>
+                </th>
                 <th className="py-3.5 px-4">CNPJ / Empresa</th>
                 <th className="py-3.5 px-4">Nome do Proprietário</th>
                 <th className="py-3.5 px-4">Cidade / Bairro</th>
                 <th className="py-3.5 px-4">Segmento (CNAE)</th>
+                <th className="py-3.5 px-4">Telefone</th>
                 <th className="py-3.5 px-4">Contato / Disparo WhatsApp</th>
                 <th className="py-3.5 px-4">Website</th>
                 <th className="py-3.5 px-4">Porte</th>
@@ -409,7 +476,19 @@ Posso fornecer o diagnóstico de forma gratuita.`;
                   const waLink = getCustomWaLink(item);
 
                   return (
-                    <tr key={item.cnpj || idx} className="hover:bg-slate-800/40 transition-colors group">
+                    <tr key={item.cnpj || idx} className={`hover:bg-slate-800/40 transition-colors group ${selectedItems.has(item.cnpj) ? 'bg-indigo-500/10' : ''}`}>
+                      
+                      {/* Checkbox Seletor */}
+                      <td className="py-3.5 px-3">
+                        <button
+                          onClick={() => toggleSelect(item.cnpj)}
+                          className="text-slate-500 hover:text-indigo-400 transition-colors"
+                        >
+                          {selectedItems.has(item.cnpj)
+                            ? <CheckSquare className="w-4 h-4 text-indigo-400" />
+                            : <Square className="w-4 h-4" />}
+                        </button>
+                      </td>
                       
                       <td className="py-3.5 px-4">
                         <div className="font-mono text-[11px] text-slate-400">{item.cnpj}</div>
@@ -435,6 +514,18 @@ Posso fornecer o diagnóstico de forma gratuita.`;
                           {cleanVal(item.segmento) || 'Atividade Comercial'}
                         </div>
                         <div className="text-[10px] text-slate-400 font-mono">CNAE: {item.cnae}</div>
+                      </td>
+
+                      {/* COLUNA TELEFONE - NOVA */}
+                      <td className="py-3.5 px-4">
+                        {cleanVal(item.telefone) ? (
+                          <div className="inline-flex items-center gap-1.5 text-slate-300 text-xs">
+                            <Phone className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                            <span className="font-mono">{cleanVal(item.telefone)}</span>
+                          </div>
+                        ) : (
+                          <span className="text-[11px] text-slate-500 italic">Sem telefone</span>
+                        )}
                       </td>
 
                       <td className="py-3.5 px-4">
@@ -480,7 +571,7 @@ Posso fornecer o diagnóstico de forma gratuita.`;
                 })
               ) : (
                 <tr>
-                  <td colSpan="7" className="py-12 text-center text-slate-400 text-xs">
+                  <td colSpan="9" className="py-12 text-center text-slate-400 text-xs">
                     Nenhuma empresa encontrada com os filtros selecionados.
                   </td>
                 </tr>
