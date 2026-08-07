@@ -7,10 +7,11 @@ import {
   Calendar, 
   Building2, 
   ExternalLink,
-  Sparkles
+  Sparkles,
+  KanbanSquare
 } from 'lucide-react';
 
-export default function MinhasListasView({ savedLists, onDeleteList }) {
+export default function MinhasListasView({ savedLists, onDeleteList, onOpenCRM }) {
   // Download de uma lista salva em CSV
   const handleDownloadSavedCSV = (list) => {
     if (!list.items || list.items.length === 0) return;
@@ -117,22 +118,31 @@ export default function MinhasListasView({ savedLists, onDeleteList }) {
               </div>
 
               {/* Ações da Lista */}
-              <div className="pt-3 border-t border-slate-800/80 flex items-center gap-2">
+              <div className="pt-3 border-t border-slate-800/80 flex flex-col gap-2">
                 <button
-                  onClick={() => handleDownloadSavedCSV(list)}
-                  className="flex-1 py-2 px-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition-all shadow-md shadow-blue-600/20"
+                  onClick={() => onOpenCRM(list)}
+                  className="w-full py-2.5 px-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold flex items-center justify-center gap-1.5 transition-all shadow-md shadow-purple-600/20"
                 >
-                  <Download className="w-3.5 h-3.5" />
-                  <span>Baixar CSV</span>
+                  <KanbanSquare className="w-4 h-4" />
+                  <span>Abrir no CRM (Kanban)</span>
                 </button>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => handleDownloadSavedCSV(list)}
+                    className="flex-1 py-2 px-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition-all shadow-md shadow-blue-600/20"
+                  >
+                    <Download className="w-3.5 h-3.5" />
+                    <span>Baixar CSV</span>
+                  </button>
 
-                <button
-                  onClick={() => handleExportGoogleSheets(list)}
-                  className="py-2 px-3 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 text-xs font-semibold flex items-center justify-center gap-1.5 transition-all"
-                  title="Compartlhar com Google Sheets"
-                >
-                  <FileSpreadsheet className="w-4 h-4" />
-                </button>
+                  <button
+                    onClick={() => handleExportGoogleSheets(list)}
+                    className="py-2 px-3 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 text-xs font-semibold flex items-center justify-center gap-1.5 transition-all"
+                    title="Compartlhar com Google Sheets"
+                  >
+                    <FileSpreadsheet className="w-4 h-4" />
+                  </button>
+                </div>
               </div>
             </div>
           ))}

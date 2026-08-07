@@ -6,6 +6,7 @@ import DashboardView from './components/DashboardView';
 import DataBaseView from './components/DataBaseView';
 import MinhasListasView from './components/MinhasListasView';
 import InteligenciaView from './components/InteligenciaView';
+import CRMKanbanView from './components/CRMKanbanView';
 import CheckoutModal from './components/CheckoutModal';
 import ObrigadoView from './components/ObrigadoView';
 import BottomMobileNav from './components/BottomMobileNav';
@@ -41,6 +42,8 @@ export default function App() {
     const saved = localStorage.getItem('cnpj_sp_minhas_listas');
     return saved ? JSON.parse(saved) : [];
   });
+
+  const [selectedCRMList, setSelectedCRMList] = useState(null);
 
   // Sincroniza Rota com a URL (Hash)
   const navigateTo = (route) => {
@@ -82,6 +85,11 @@ export default function App() {
     const updated = savedLists.filter(l => l.id !== listId);
     setSavedLists(updated);
     localStorage.setItem('cnpj_sp_minhas_listas', JSON.stringify(updated));
+  };
+
+  const handleOpenCRM = (list) => {
+    setSelectedCRMList(list);
+    setActiveTab('crm_kanban');
   };
 
   // 1. ROTA DE OBRIGADO (Pós-Checkout)
@@ -152,6 +160,14 @@ export default function App() {
           <MinhasListasView
             savedLists={savedLists}
             onDeleteList={handleDeleteList}
+            onOpenCRM={handleOpenCRM}
+          />
+        )}
+
+        {activeTab === 'crm_kanban' && (
+          <CRMKanbanView
+            list={selectedCRMList}
+            onBack={() => setActiveTab('minhas_listas')}
           />
         )}
 
