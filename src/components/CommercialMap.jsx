@@ -40,8 +40,8 @@ export default function CommercialMap() {
   const workflowSteps = [
     {
       step: '1',
-      title: 'Mapeamento Local',
-      desc: 'Buscar no Google/Maps por "Clínica Médica [Cidade]" e identificar empresas ativas no bairro.',
+      title: 'Busca no Painel',
+      desc: 'Pesquise diretamente no banco de dados do painel por segmento e cidade para extrair listas segmentadas.',
       icon: Search,
       color: 'text-blue-400 bg-blue-500/10 border-blue-500/30'
     },
