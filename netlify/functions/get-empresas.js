@@ -36,6 +36,30 @@ export async function handler(event, context) {
     await client.connect();
 
     const queryParams = event.queryStringParameters || {};
+
+    # Rota Específica de Estatísticas Dinâmicas Reais
+    if (queryParams.stats === 'true') {
+      const [totRes, waRes, siteRes, meiRes] = await Promise.all([
+        client.query("SELECT COUNT(*) FROM public.empresas WHERE ativa = TRUE"),
+        client.query("SELECT COUNT(*) FROM public.empresas WHERE ativa = TRUE AND whatsapp IS NOT NULL AND whatsapp != ''"),
+        client.query("SELECT COUNT(*) FROM public.empresas WHERE ativa = TRUE AND site IS NOT NULL AND site != ''"),
+        client.query("SELECT COUNT(*) FROM public.empresas WHERE ativa = TRUE AND (porte LIKE '%MEI%' OR porte LIKE '%ME%')")
+      ]);
+
+      await client.end();
+
+      return {
+        statusCode: 200,
+        headers,
+        body: JSON.stringify({
+          total: parseInt(totRes.rows[0].count, 10),
+          comWhatsapp: parseInt(waRes.rows[0].count, 10),
+          comSite: parseInt(siteRes.rows[0].count, 10),
+          meiMe: parseInt(meiRes.rows[0].count, 10)
+        })
+      };
+    }
+
     const cidade = (queryParams.cidade || '').trim();
     const cnae = (queryParams.cnae || '').trim();
     const comWhatsapp = queryParams.comWhatsapp === 'true';

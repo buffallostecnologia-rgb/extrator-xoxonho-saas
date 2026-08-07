@@ -112,6 +112,7 @@ export default function App() {
         <LoginModal 
           onLogin={handleLogin} 
           onClose={() => navigateTo('landing')} 
+          onOpenCheckout={() => setIsCheckoutOpen(true)}
         />
         <CheckoutModal 
           isOpen={isCheckoutOpen} 
