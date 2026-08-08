@@ -40,7 +40,7 @@ export default function ConfiguracoesView() {
     setTestStatus('loading');
     try {
       // Usa proxy Netlify para evitar bloqueio de CORS do navegador
-      const res = await fetch('https://buffallos.netlify.app/.netlify/functions/test-gemini', {
+      const res = await fetch('https://buffallos-api.kionesperegrino91.workers.dev/test-gemini', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ apiKey: apiKey.trim() })
